@@ -1,0 +1,233 @@
+﻿<AML>
+ <Item type="Life Cycle Map" id="618AFD7EEFF64B63BF41F569BE10A00A" action="add">
+  <description>Action Item</description>
+  <name>gAction Item</name>
+  <start_state keyed_name="New" type="Life Cycle State">64FABD97F0784603A1052274BE8F153F</start_state>
+  <Relationships>
+   <Item type="Life Cycle State" id="F1F7764DEC194572866B7DB2C97E7B39" action="add">
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Closed</label>
+    <name>Closed</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <state_permission_id keyed_name="gAction Item Done" type="Permission">E070D18D64CE4D7696F294725806A8C2</state_permission_id>
+    <x>364</x>
+    <y>84</y>
+   </Item>
+   <Item type="Life Cycle State" id="20BB32FFE0234B45886EF715B3C02859" action="add">
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <label xml:lang="en">In Review</label>
+    <name>In Review</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <state_permission_id keyed_name="gAction Item In Review" type="Permission">F2F5052107A547208AF737F66C5DF360</state_permission_id>
+    <x>259</x>
+    <y>178</y>
+   </Item>
+   <Item type="Life Cycle State" id="64FABD97F0784603A1052274BE8F153F" action="add">
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <label xml:lang="en">New</label>
+    <name>New</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <state_permission_id keyed_name="gAction Item New" type="Permission">C6493D3DFA014F1CAD2F0991F8FEBEB8</state_permission_id>
+    <x>31</x>
+    <y>87</y>
+   </Item>
+   <Item type="Life Cycle State" id="A83E88942C1A441C806B7D3AB3F44477" action="add">
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <label xml:lang="en">Open</label>
+    <name>Open</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <state_permission_id keyed_name="gAction Item Open" type="Permission">9063128994BF4C0DBBD9308D900E0F0F</state_permission_id>
+    <x>196</x>
+    <y>84</y>
+   </Item>
+   <Item type="Life Cycle State" id="BC977998746443718B94119ED7DF5D98" action="add">
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <label xml:lang="en">Rejected</label>
+    <name>Rejected</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <state_permission_id keyed_name="gAction Item Rejected" type="Permission">9A105C0849BD486B8AA2321F55A636D1</state_permission_id>
+    <x>111</x>
+    <y>11</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="D817E4056B554AD09B7E6074F228638D" action="add">
+    <from_state keyed_name="In Review" type="Life Cycle State">20BB32FFE0234B45886EF715B3C02859</from_state>
+    <get_comment>0</get_comment>
+    <post_action keyed_name="gActionItem setCloseDate" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>gActionItem setCloseDate</name>
+     </Item>
+    </post_action>
+    <pre_action keyed_name="gAction Item Check Closing Notes" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>gAction Item Check Closing Notes</name>
+     </Item>
+    </pre_action>
+    <role keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</role>
+    <segments></segments>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <to_state keyed_name="Closed" type="Life Cycle State">F1F7764DEC194572866B7DB2C97E7B39</to_state>
+    <x>25</x>
+    <y>-36</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="52AB56E9707148EE983D91C8C229ADE1" action="add">
+    <from_state keyed_name="In Review" type="Life Cycle State">20BB32FFE0234B45886EF715B3C02859</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</role>
+    <segments>207,171</segments>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <to_state keyed_name="Open" type="Life Cycle State">A83E88942C1A441C806B7D3AB3F44477</to_state>
+    <x>-138</x>
+    <y>-14</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="05B90039824F452E879D090EAFB7326A" action="add">
+    <from_state keyed_name="New" type="Life Cycle State">64FABD97F0784603A1052274BE8F153F</from_state>
+    <get_comment>0</get_comment>
+    <post_action keyed_name="gAction Item start Workflow" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>gAction Item start Workflow</name>
+     </Item>
+    </post_action>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments></segments>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <to_state keyed_name="Open" type="Life Cycle State">A83E88942C1A441C806B7D3AB3F44477</to_state>
+    <x>-1</x>
+    <y>-1</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="4A2BD6833688468FBC895192967E0A81" action="add">
+    <from_state keyed_name="New" type="Life Cycle State">64FABD97F0784603A1052274BE8F153F</from_state>
+    <get_comment>0</get_comment>
+    <post_action keyed_name="gAction Item start Workflow" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>gAction Item start Workflow</name>
+     </Item>
+    </post_action>
+    <role keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</role>
+    <segments></segments>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <to_state keyed_name="Open" type="Life Cycle State">A83E88942C1A441C806B7D3AB3F44477</to_state>
+    <x>48</x>
+    <y>-3</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="AD325B14B92F420AB6E3A9220447749F" action="add">
+    <from_state keyed_name="New" type="Life Cycle State">64FABD97F0784603A1052274BE8F153F</from_state>
+    <get_comment>0</get_comment>
+    <post_action keyed_name="gAction Item start Workflow" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>gAction Item start Workflow</name>
+     </Item>
+    </post_action>
+    <role keyed_name="Creator" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Creator</name>
+     </Item>
+    </role>
+    <segments></segments>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <to_state keyed_name="Open" type="Life Cycle State">A83E88942C1A441C806B7D3AB3F44477</to_state>
+    <x>46</x>
+    <y>27</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="250DEC9C545047E5A3555688ACA22453" action="add">
+    <from_state keyed_name="Open" type="Life Cycle State">A83E88942C1A441C806B7D3AB3F44477</from_state>
+    <get_comment>0</get_comment>
+    <post_action keyed_name="gActionItem setCloseDate" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>gActionItem setCloseDate</name>
+     </Item>
+    </post_action>
+    <pre_action keyed_name="gAction Item Check Closing Notes" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>gAction Item Check Closing Notes</name>
+     </Item>
+    </pre_action>
+    <role keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</role>
+    <segments></segments>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <to_state keyed_name="Closed" type="Life Cycle State">F1F7764DEC194572866B7DB2C97E7B39</to_state>
+    <x>44</x>
+    <y>13</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="92F99BE564EF43B59503EE1527383C28" action="add">
+    <from_state keyed_name="Open" type="Life Cycle State">A83E88942C1A441C806B7D3AB3F44477</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</role>
+    <segments></segments>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <to_state keyed_name="In Review" type="Life Cycle State">20BB32FFE0234B45886EF715B3C02859</to_state>
+    <x>12</x>
+    <y>53</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="B8EF45B02C834BA6A76B8BA0D0AF247F" action="add">
+    <from_state keyed_name="Open" type="Life Cycle State">A83E88942C1A441C806B7D3AB3F44477</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</role>
+    <segments>186,37</segments>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <to_state keyed_name="Rejected" type="Life Cycle State">BC977998746443718B94119ED7DF5D98</to_state>
+    <x>-19</x>
+    <y>-45</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="874C45A0B1254735A28D07EF4716441B" action="add">
+    <from_state keyed_name="Rejected" type="Life Cycle State">BC977998746443718B94119ED7DF5D98</from_state>
+    <get_comment>0</get_comment>
+    <post_action keyed_name="gActionItem setCloseDate" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>gActionItem setCloseDate</name>
+     </Item>
+    </post_action>
+    <pre_action keyed_name="gAction Item Check Closing Notes" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>gAction Item Check Closing Notes</name>
+     </Item>
+    </pre_action>
+    <role keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</role>
+    <segments>286,24</segments>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <to_state keyed_name="Closed" type="Life Cycle State">F1F7764DEC194572866B7DB2C97E7B39</to_state>
+    <x>177</x>
+    <y>17</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="C4BBCE93B9E0461EB7F4C17BE849B909" action="add">
+    <from_state keyed_name="Rejected" type="Life Cycle State">BC977998746443718B94119ED7DF5D98</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</role>
+    <segments></segments>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</source_id>
+    <to_state keyed_name="Open" type="Life Cycle State">A83E88942C1A441C806B7D3AB3F44477</to_state>
+    <x>-3</x>
+    <y>44</y>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

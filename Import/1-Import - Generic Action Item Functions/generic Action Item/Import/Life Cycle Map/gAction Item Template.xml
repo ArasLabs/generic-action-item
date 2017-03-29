@@ -1,0 +1,120 @@
+﻿<AML>
+ <Item type="Life Cycle Map" id="EA8A21E377FC4A14AB03325728BDB5EE" action="add">
+  <name>gAction Item Template</name>
+  <start_state keyed_name="New" type="Life Cycle State">29B44DDD495746ECA1B3709E1ECA4B5E</start_state>
+  <Relationships>
+   <Item type="Life Cycle State" id="F37A6C533FF6480697B3B2A469CEEF0C" action="add">
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <name>Active</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="gAction Item Template" type="Life Cycle Map">EA8A21E377FC4A14AB03325728BDB5EE</source_id>
+    <state_permission_id keyed_name="gAction Item Templ Active" type="Permission">C6F34F2A1E8E47B2B43DEC2ACABFE6A5</state_permission_id>
+    <x>234</x>
+    <y>70</y>
+   </Item>
+   <Item type="Life Cycle State" id="98F19988BDBC40EBB9915FAAE6923D3A" action="add">
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <name>Archived</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="gAction Item Template" type="Life Cycle Map">EA8A21E377FC4A14AB03325728BDB5EE</source_id>
+    <state_permission_id keyed_name="gAction Item Templ Archived" type="Permission">1358C186CA184F1B95BCC5BDC83348F8</state_permission_id>
+    <x>430</x>
+    <y>71</y>
+   </Item>
+   <Item type="Life Cycle State" id="91F58AE471DF40678C1C15D3CC87A02F" action="add">
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <label xml:lang="en">Inactive</label>
+    <name>Inactive</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="gAction Item Template" type="Life Cycle Map">EA8A21E377FC4A14AB03325728BDB5EE</source_id>
+    <x>237</x>
+    <y>169</y>
+   </Item>
+   <Item type="Life Cycle State" id="29B44DDD495746ECA1B3709E1ECA4B5E" action="add">
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <name>New</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item Template" type="Life Cycle Map">EA8A21E377FC4A14AB03325728BDB5EE</source_id>
+    <state_permission_id keyed_name="gAction Item Templ New" type="Permission">0EACC3C885DB4B79B1816B2C13BD37CF</state_permission_id>
+    <x>50</x>
+    <y>70</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="4F38736A491A453AACD469A6F07BD94D" action="add">
+    <from_state keyed_name="Active" type="Life Cycle State">F37A6C533FF6480697B3B2A469CEEF0C</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments></segments>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="gAction Item Template" type="Life Cycle Map">EA8A21E377FC4A14AB03325728BDB5EE</source_id>
+    <to_state keyed_name="Archived" type="Life Cycle State">98F19988BDBC40EBB9915FAAE6923D3A</to_state>
+    <x>-1</x>
+    <y>-1</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="4FE1024B76F24F2999E258DDAEF5A502" action="add">
+    <from_state keyed_name="Active" type="Life Cycle State">F37A6C533FF6480697B3B2A469CEEF0C</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments>218,125</segments>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="gAction Item Template" type="Life Cycle Map">EA8A21E377FC4A14AB03325728BDB5EE</source_id>
+    <to_state keyed_name="Inactive" type="Life Cycle State">91F58AE471DF40678C1C15D3CC87A02F</to_state>
+    <x>-65</x>
+    <y>65</y>
+   </Item>
+  
+   <Item type="Life Cycle Transition" id="79603E1A7A764AFC8454AD5469DFD67F" action="add">
+    <from_state keyed_name="Archived" type="Life Cycle State">98F19988BDBC40EBB9915FAAE6923D3A</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</role>
+    <segments>339,46</segments>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="gAction Item Template" type="Life Cycle Map">EA8A21E377FC4A14AB03325728BDB5EE</source_id>
+    <to_state keyed_name="Active" type="Life Cycle State">F37A6C533FF6480697B3B2A469CEEF0C</to_state>
+    <x>-129</x>
+    <y>-42</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="3BA33E5E8D824E4D9A7C1A6792826E6F" action="add">
+    <from_state keyed_name="Inactive" type="Life Cycle State">91F58AE471DF40678C1C15D3CC87A02F</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments>281,138</segments>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="gAction Item Template" type="Life Cycle Map">EA8A21E377FC4A14AB03325728BDB5EE</source_id>
+    <to_state keyed_name="Active" type="Life Cycle State">F37A6C533FF6480697B3B2A469CEEF0C</to_state>
+    <x>31</x>
+    <y>-25</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="AD9B85CF8EED4443920D2932C2E055FD" action="add">
+    <from_state keyed_name="New" type="Life Cycle State">29B44DDD495746ECA1B3709E1ECA4B5E</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item Template" type="Life Cycle Map">EA8A21E377FC4A14AB03325728BDB5EE</source_id>
+    <to_state keyed_name="Active" type="Life Cycle State">F37A6C533FF6480697B3B2A469CEEF0C</to_state>
+   </Item></Relationships>
+ </Item>
+</AML>

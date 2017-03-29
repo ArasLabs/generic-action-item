@@ -1,0 +1,45 @@
+﻿<AML>
+ <Item type="Permission" id="1358C186CA184F1B95BCC5BDC83348F8" action="add">
+  <is_private>0</is_private>
+  <name>gAction Item Templ Archived</name>
+  <Relationships>
+   <Item type="Access" id="AF1000AF69D44459BCDA52691FEE3128" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
+    <show_permissions_warning>1</show_permissions_warning>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item Templ Archived" type="Permission">1358C186CA184F1B95BCC5BDC83348F8</source_id>
+   </Item>
+   <Item type="Access" id="C412CC15FE754C8FB07BB7E7D37DE270" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</related_id>
+    <show_permissions_warning>1</show_permissions_warning>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="gAction Item Templ Archived" type="Permission">1358C186CA184F1B95BCC5BDC83348F8</source_id>
+   </Item>
+  
+   <Item type="Access" id="5F1685821A1A4C678FC66BEDEA70E83D" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="gAction Item Templ Archived" type="Permission">1358C186CA184F1B95BCC5BDC83348F8</source_id>
+   </Item></Relationships>
+ </Item>
+</AML>

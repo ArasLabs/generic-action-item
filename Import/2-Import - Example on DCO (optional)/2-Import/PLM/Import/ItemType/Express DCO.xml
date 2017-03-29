@@ -1,0 +1,12 @@
+﻿<AML>
+ <Item type="ItemType" id="B678FAF40F7246A7925FB5B116988915" action="add">
+  <name>Express DCO</name>
+  <Relationships>
+   <Item type="Item Action" id="0D339CAA14E5478799BA7D2ACCE9DB4E" action="add">
+    <related_id keyed_name="Add Expr DCO Action from Templ" type="Action">1E1499601F4749B3A2D832BEB64F425B</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="Express DCO" type="ItemType" name="Express DCO">B678FAF40F7246A7925FB5B116988915</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

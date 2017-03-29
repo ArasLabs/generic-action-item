@@ -1,0 +1,46 @@
+﻿<AML>
+ <Item type="Method" id="953F896A55AC4726874B2E859EC2AD45" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[if (this.isNew() == 1) {
+top.aras.AlertError("Save the item first");
+return;
+}
+
+// Check if the part is locked
+if (this.getLockStatus()!=1){
+ top.aras.AlertError("This item is not locked by you");
+ return;
+}
+// Check if actions already listed
+var amlCmd = top.aras.newIOMItem("","");
+amlCmd.loadAML("<Item type='Express DCO gAction Item' action='get' select='id' ><source_id>" + this.getID() + "</source_id></Item>");
+amlCmd = amlCmd.apply();
+// if actions found, return error
+if (amlCmd.getItemCount() > 0) {top.aras.AlertError("DCO already has Action Items. List must be empty to add from template."); return;}
+
+//find Action item template by criteria:  name = 'Express DCO default Actions'
+amlCmd = top.aras.newIOMItem("","");
+amlCmd.loadAML("<Item type='gAction Item Template' action='get' ><name>Express DCO default Actions</name></Item>");
+var actionTemplate = amlCmd.apply();
+
+//if no template found, return error
+if (actionTemplate.getItemCount() === 0) {top.aras.AlertError("Action Template 'Express DCO default Actions' not found ! See your System Administrator."); return;}
+
+//call server method to instantiate actions from this template
+actionTemplate = actionTemplate.getItemByIndex(0); // use first found 
+
+actionTemplate.setAttribute("actionItemSourceItemType",this.GetType());
+actionTemplate.setAttribute("actionItemSourceItemId",this.getID()); //this DCO's ID
+
+actionTemplate = actionTemplate.apply("gAction Instantiate From Templ");
+if (actionTemplate.isError()) {top.aras.AlertError(actionTemplate.getErrorString()); return;}
+
+top.aras.AlertError("Action Items added. Refresh DCO.");
+
+return;
+
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>Add Expr DCO Action from Templ</name>
+ </Item>
+</AML>

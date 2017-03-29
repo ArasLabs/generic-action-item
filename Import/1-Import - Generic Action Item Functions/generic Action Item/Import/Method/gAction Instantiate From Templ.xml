@@ -1,0 +1,130 @@
+﻿<AML>
+ <Item type="Method" id="D2AA2960CF514AD0AB1A97E2173C41F5" action="add">
+  <comments>instantiates action items from template (this context) and add then to defined relationship</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[' This (Me) context must be of type "gAction Item Template" !!
+'
+' addl. arguments are passed in as custom attributes of the item context
+'
+'   <Item type="gAction Item Template" ..  actionItemSourceItemType=".." actionItemSourceItemId=".."   
+'
+'  if actionRelationshipName is not set, then only the actionItem item is created and returned 
+'  else the action item is created and connected to the defined relationship assuming thisItem to be the source item
+'
+'MethodTemplateName=VBMain;
+Dim inn As Innovator = Me.getInnovator()
+
+Function Main() As Item
+  'System.Diagnostics.Debugger.Break()
+  Dim actionTemplId As String = Me.getID()
+  Dim actionItemSourceItemType As String = Me.getAttribute("actionItemSourceItemType","")
+  Dim actionItemSourceItemId As String = Me.getAttribute("actionItemSourceItemId","")
+  Dim actionTemplActionType As String = Me.getProperty("action_item_type","generic_action")
+  Dim isAddRelatedActionItems As String = Me.getProperty("is_add_related_action_items","0")
+  Dim isStartRelatedActionItems As String = Me.getProperty("is_start_related_action_items","0")
+  
+  If actionItemSourceItemType = "" Or actionItemSourceItemId = "" Then
+    inn.newError("Method 'gAction Instantiate From Templ' failed. Missing arguments 'actionItemSourceItemType' or 'actionItemSourceItemId'")
+  End If
+  
+  'get target relationship's name
+  Dim itm As Item = Me.newItem("","")
+  itm.loadAML("<Item type='RelationshipType' action='get' select='name' id='" & Me.getProperty("action_item_target_relationship","invalid") & "' />")
+  itm = itm.apply("")
+  If itm.isError() Then Return itm
+
+  Dim targetRelshipName As String = itm.getProperty("name","")
+  
+  'get all template actions, then loop to copy to new target relationship
+  Dim amlCmd As String = "<Item type='gAction Item Template Action' action='get' select='*' >" & _
+  	"<source_id>" & actionTemplId & "</source_id>" & _
+  	"</Item>"
+
+  Dim templActions As Item = Me.newItem("","")
+  templActions.loadAML(amlCmd)
+  templActions = templActions.apply()
+
+  Dim dtNow As DateTime = System.DateTime.UtcNow
+  Dim tmpPtrn As String = "yyyy-MM-ddTHH:mm:ss"
+  Dim sCntxt As I18NSessionContext = Me.getInnovator().getI18NSessionContext()
+
+  Dim i As Integer
+  For i=0 To templActions.getItemCount()-1
+    itm = Me.newItem(actionItemSourceItemType,"")
+    
+    'call server method
+    itm.setID(actionItemSourceItemId)
+    
+  Dim actionType As String = Me.getAttribute("actionType","generic_action")
+
+    itm.setAttribute("actionType",actionTemplActionType)
+    itm.setAttribute("actionRelationshipName",targetRelshipName)
+    itm.setAttribute("addRelatedActionItem",isAddRelatedActionItems)
+    itm.setAttribute("startRelatedActionItem",isStartRelatedActionItems)
+    itm.setAttribute("closingNotesRequired",templActions.getItemByIndex(i).getProperty("is_closing_notes_required",""))
+
+    itm.setAttribute("actionOwnerId",resolveIdentityID(templActions.getItemByIndex(i).getProperty("owned_by_id",""),actionItemSourceItemType,actionItemSourceItemId))
+    itm.setAttribute("actionManagerId",resolveIdentityID(templActions.getItemByIndex(i).getProperty("managed_by_id",""),actionItemSourceItemType,actionItemSourceItemId))
+    itm.setAttribute("actionDescr",templActions.getItemByIndex(i).getProperty("action_item_description",""))
+    itm.setAttribute("actionPriority",templActions.getItemByIndex(i).getProperty("action_priority",""))
+  
+  	Dim dueDateOffset As Integer = templActions.getItemByIndex(i).getProperty("action_due_date_offset_days","0")
+  	If dueDateOffset > 0 Then
+  	  Dim dueDate As DateTime = dtNow.AddDays(dueDateOffset)
+      Dim tmpDt As String = dueDate.toString(tmpPtrn, DateTimeFormatInfo.InvariantInfo)
+      itm.setAttribute("actionDueDate",sCntxt.ConvertUtcDateTimeToNeutral(tmpDt, tmpPtrn))
+  	End If
+    itm = itm.apply("gAction Item add ActionRelation")
+    If itm.isError() Then Return itm
+  	
+  Next i
+  
+  Dim relationshipName As String = Me.getAttribute("actionRelationshipName","")
+  Dim actionOwnerId As String = Me.getAttribute("actionOwnerId","")
+  
+  Return Me
+End Function
+
+'------
+Private Function resolveIdentityID(thisIdentityId As String, sourceItemType As String, sourceItemId As String) As String
+  If thisIdentityId = "" Then Return ""
+
+  Dim retIdentityId As String = thisIdentityId
+  Dim identityProp As String = ""
+ 
+  ' resolve OwnerManagerCreatorFromSourceItem
+  Select Case (thisIdentityId)
+   Case "8FE5430B42014D94AE83246F299D9CC4" ' Aras system Identity "Creator"
+     retIdentityId = ""
+     identityProp = "created_by_id"
+   Case "538B300BB2A347F396C436E9EEE1976C" ' Aras system Identity "Owner"
+     retIdentityId = ""
+     identityProp = "owned_by_id"
+   Case "9200A800443E4A5AAA80D0BCE5760307" ' Aras system Identity "Manager"
+     retIdentityId = ""
+     identityProp = "managed_by_id"
+  End Select
+
+  ' if sourceItem does not have a value
+  If retIdentityId = "" Then
+    Dim srcItem As Item = Me.getInnovator().getItemByID(sourceItemType,sourceItemId)
+    identityProp = srcItem.getProperty(identityProp,"") 
+    If retIdentityId = "" Then 
+       Dim aliasId As String = Me.getInnovator().getUserAliases()
+       If (aliasId <> "") Then
+         aliasId = aliasId.Substring(0,32)
+         Dim AliasItem As Item = Me.getInnovator().getItemById("Identity", aliasId)
+         If (AliasItem.getItemCount() =1) Then
+           retIdentityId = AliasItem.getAttribute("id")
+         End If
+       End If
+    End If
+  End If
+
+  Return retIdentityId
+
+End Function]]></method_code>
+  <method_type>VB</method_type>
+  <name>gAction Instantiate From Templ</name>
+ </Item>
+</AML>

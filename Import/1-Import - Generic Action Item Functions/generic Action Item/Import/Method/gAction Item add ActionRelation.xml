@@ -1,0 +1,108 @@
+﻿<AML>
+ <Item type="Method" id="CF57819E262642729B76FAE14E27C2C0" action="add">
+  <comments>called from other Methods to add an Action Item row (of defined relationship type) to this Item</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[' arguments must be passed in as custom attributes of the item context
+'
+'   <Item type="##thisType##" ..  actionRelationshipName=".." actionOwnerId=".."  actionManagerId=".."    
+'        actionDescr='..'  actionPriority='..' actionType='..' actionDueDate="YYYY-MM-DD" actionCloseBeforeState=".."
+'
+'  Optional are: actionDueDate and actionCloseBeforeState and actionType,actionPriority
+'
+'  if actionRelationshipName is not set, then only the actionItem item is created and returned 
+'  else the action item is created and connected to the defined relationship assuming thisItem to be the source item
+'
+'MethodTemplateName=VBMain;
+Dim inn As Innovator = Me.getInnovator()
+
+Function Main() As Item
+  'System.Diagnostics.Debugger.Break()
+  Dim relationshipName As String = Me.getAttribute("actionRelationshipName","")
+  Dim isAddRelatedActionItem As Boolean = (Me.getAttribute("addRelatedActionItem","0") = "1") 'defaults to 0, if not set
+  Dim isStartRelatedActionItem As Boolean = (Me.getAttribute("startRelatedActionItem","0") = "1") 'defaults to 0, if not set
+
+  Dim actionOwnerId As String = Me.getAttribute("actionOwnerId","")
+  Dim actionManagerId As String = Me.getAttribute("actionManagerId","")
+  Dim actionDescr As String = Me.getAttribute("actionDescr","")
+  Dim actionPriority As String = Me.getAttribute("actionPriority","medium")
+  Dim actionType As String = Me.getAttribute("actionType","generic_action")
+  Dim dueDate As String = Me.getAttribute("actionDueDate","")
+  Dim isClosingNotesRequired As String = Me.getAttribute("closingNotesRequired","")
+  Dim closeBeforeState As String  = Me.getAttribute("actionCloseBeforeState","")
+  
+  If actionOwnerId = "" Or actionDescr = "" Then Return inn.newError("Missing argument values (custom attributes) for actionRelationshipName,actionOwnerId, or actionDescr")
+
+  'create Action Item for owner   
+  Dim actionItemId As String = inn.getNewID()
+  Dim actionItem As Item = Me.newItem ("gAction Item","add")
+  actionItem.setID(actionItemId)
+  actionItem.setProperty("action_item_description",actionDescr)
+  actionItem.setProperty("action_item_priority",actionPriority)
+  actionItem.setProperty("action_item_type",actionType)
+  actionItem.setProperty("owned_by_id",actionOwnerId)
+  actionItem.setProperty("is_closing_notes_required",isClosingNotesRequired)
+  
+  If actionManagerId <> "" Then  actionItem.setProperty("managed_by_id",actionManagerId)
+
+  If dueDate <> "" Then actionItem.setProperty("action_item_due_date",dueDate)
+
+  ' Grant 'Aras PLM' permissions for the merge call
+  Dim plmIdentity As Aras.Server.Security.Identity = Aras.Server.Security.Identity.GetByName("Super User")
+  Dim PermissionWasSet As Boolean  = Aras.Server.Security.Permissions.GrantIdentity(plmIdentity)
+  Dim res As Item
+    
+  If relationshipName <> "" Then 
+    Dim thisItemActionRel As Item = Me.newItem (relationshipName,"add")
+    
+    'relationship may have replicated properties for 'description,due_date' etc., which may be set to be a required property.
+    'if relationship does not have this property, it will be ignored.
+    thisItemActionRel.setProperty("action_item_description",actionDescr)
+    
+    thisItemActionRel.setProperty("owned_by_id",actionOwnerId)
+    thisItemActionRel.setProperty("action_item_priority",actionPriority)
+    If actionManagerId <> "" Then  thisItemActionRel.setProperty("managed_by_id",actionManagerId)
+    If dueDate <> "" Then thisItemActionRel.setProperty("action_item_due_date",dueDate)
+    If isClosingNotesRequired <> "" Then  thisItemActionRel.setProperty("is_closing_notes_required",isClosingNotesRequired)
+
+    thisItemActionRel.setProperty("source_id",Me.getID())
+    'thisItemActionRel.setProperty("sort_order","1")
+
+    If closeBeforeState <> "" Then
+      thisItemActionRel.setProperty("source_item_check_rule","CloseBeforeSourceItemState")
+      thisItemActionRel.setProperty("source_item_check_status",closeBeforeState)
+    End If
+
+    If Not isAddRelatedActionItem Then
+      isStartRelatedActionItem = False  'ensure no attempt is made to start the action
+    Else
+      thisItemActionRel.setRelatedItem(actionItem)
+    End If
+
+    res = thisItemActionRel.apply() 'add relationship with or without related action
+    
+  Else
+    'creates action item only, without relationship to other
+    res = actionItem.apply()
+  
+  End If  
+  If res.isError() Then Return res
+
+  'promote the action item's life cycle to "Open"
+  If isStartRelatedActionItem Then
+    actionItem = Me.newItem("gAction Item","promoteItem")
+    actionItem.setID(actionItemId)
+    actionItem.setProperty("state","Open")
+    actionItem = actionItem.apply()
+    If actionItem.isError() Then Return actionItem
+  End If
+ 
+  'Revoke 'Aras PLM' permissions
+  If (PermissionWasSet) Then Aras.Server.Security.Permissions.RevokeIdentity(plmIdentity)
+
+  Return res
+End Function
+]]></method_code>
+  <method_type>VB</method_type>
+  <name>gAction Item add ActionRelation</name>
+ </Item>
+</AML>

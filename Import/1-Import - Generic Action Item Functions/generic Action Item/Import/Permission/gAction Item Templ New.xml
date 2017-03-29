@@ -1,0 +1,60 @@
+﻿<AML>
+ <Item type="Permission" id="0EACC3C885DB4B79B1816B2C13BD37CF" action="add">
+  <is_private>0</is_private>
+  <name>gAction Item Templ New</name>
+  <Relationships>
+   <Item type="Access" id="CF7AA828443A484C91AF9F19D8ECA211" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
+    <show_permissions_warning>1</show_permissions_warning>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item Templ New" type="Permission">0EACC3C885DB4B79B1816B2C13BD37CF</source_id>
+   </Item>
+   <Item type="Access" id="CFEB667B7211428CAC48D487B6F1F33B" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</related_id>
+    <show_permissions_warning>1</show_permissions_warning>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="gAction Item Templ New" type="Permission">0EACC3C885DB4B79B1816B2C13BD37CF</source_id>
+   </Item>
+   <Item type="Access" id="FA21B7CE5654447A9D556E4E26E19BC8" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Creator" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Creator</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>1</show_permissions_warning>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="gAction Item Templ New" type="Permission">0EACC3C885DB4B79B1816B2C13BD37CF</source_id>
+   </Item>
+  
+   <Item type="Access" id="A5D0748BAACD4F5DA9AB5390604B4C70" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>1</show_permissions_warning>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="gAction Item Templ New" type="Permission">0EACC3C885DB4B79B1816B2C13BD37CF</source_id>
+   </Item></Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,37 @@
+﻿<AML>
+ <Item type="List" id="2EE3D23C753C45C4A1D4AB2C7B485A0E" action="add">
+  <name>gAction Item Types</name>
+  <Relationships>
+   <Item type="Value" id="6762A53B3FCD419BA828B4C241F4AABF" action="add">
+    <label xml:lang="en">Ad-Hoc</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item Types" type="List">2EE3D23C753C45C4A1D4AB2C7B485A0E</source_id>
+    <value>ad_hoc_action</value>
+   </Item>
+   <Item type="Value" id="565A455A4A23441C9BA69D39FBFE74A7" action="add">
+    <label xml:lang="en">Corrective Action</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="gAction Item Types" type="List">2EE3D23C753C45C4A1D4AB2C7B485A0E</source_id>
+    <value>corrective_action</value>
+   </Item>
+   <Item type="Value" id="A149D59F67A2495895EB740280B8A75C" action="add">
+    <label xml:lang="en">Dispo Action</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="gAction Item Types" type="List">2EE3D23C753C45C4A1D4AB2C7B485A0E</source_id>
+    <value>disposition_action</value>
+   </Item>
+   <Item type="Value" id="E09B826486CE435F8AF439DF21496581" action="add">
+    <label xml:lang="en">Generic</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="gAction Item Types" type="List">2EE3D23C753C45C4A1D4AB2C7B485A0E</source_id>
+    <value>generic_action</value>
+   </Item>
+  
+   <Item type="Value" id="985A0046B30045C897DA40A5724B990D" action="add">
+    <label xml:lang="en">Immediate Action</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="gAction Item Types" type="List">2EE3D23C753C45C4A1D4AB2C7B485A0E</source_id>
+    <value>immediate_action</value>
+   </Item></Relationships>
+ </Item>
+</AML>

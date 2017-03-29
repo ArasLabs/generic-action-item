@@ -1,0 +1,5 @@
+<imports>
+  <package name="generic Action Item Template Data" path="Example Action Item Template\Import">
+    <dependson name="generic Action Item" />
+  </package>
+</imports>

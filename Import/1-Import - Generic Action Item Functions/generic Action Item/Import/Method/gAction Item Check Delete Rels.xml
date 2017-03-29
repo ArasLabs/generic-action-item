@@ -1,0 +1,27 @@
+﻿<AML>
+ <Item type="Method" id="4B7D8BE473E5430494EB58DFCE4390E6" action="add">
+  <comments>must be onBefore Delete of relationship with related Item being the gAction Item</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[' this will check the status of the related gAction Item
+' Delete is only allowed, if status of gAction Item is "New"
+' Else a Workflow was started on gAction Item and it should not be deleted, not closed
+
+' Add this to all your relationship itemType's ServerEvents 
+Dim thisRel As Item = Me.newItem(Me.GetType(),"get")
+thisRel.setID(Me.getID())
+thisRel.setAttribute("select","related_id(keyed_name,state)")
+thisRel = thisRel.apply()
+
+If thisRel.getProperty("related_id","") <> "" Then
+  If (thisRel.getPropertyItem("related_id").getProperty("state","") <> "New") Then
+    Return Me.getInnovator().newError("related Action Item can only be deleted while in status 'New' !")
+  End If
+End If
+
+Return Me
+
+]]></method_code>
+  <method_type>VB</method_type>
+  <name>gAction Item Check Delete Rels</name>
+ </Item>
+</AML>

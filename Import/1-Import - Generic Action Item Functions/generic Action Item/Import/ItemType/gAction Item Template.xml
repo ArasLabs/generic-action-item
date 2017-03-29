@@ -1,0 +1,278 @@
+﻿<AML>
+ <Item type="ItemType" id="7C93F0563E114E91BD27FD65C04AE397" action="add">
+  <allow_private_permission>1</allow_private_permission>
+  <auto_search>1</auto_search>
+  <class_structure><![CDATA[<class id="7C93F0563E114E91BD27FD65C04AE397" />]]></class_structure>
+  <default_page_size>40</default_page_size>
+  <enforce_discovery>1</enforce_discovery>
+  <hide_where_used>0</hide_where_used>
+  <implementation_type>table</implementation_type>
+  <instance_data>GACTION_ITEM_TEMPLATE</instance_data>
+  <is_dependent>0</is_dependent>
+  <is_relationship>0</is_relationship>
+  <is_versionable>0</is_versionable>
+  <label xml:lang="en">Action Item Template</label>
+  <label_plural xml:lang="en">Action Item Templates</label_plural>
+  <large_icon>../images/Icons/32x32/32x32_check_list.gif</large_icon>
+  <manual_versioning>0</manual_versioning>
+  <maxrecords>500</maxrecords>
+  <name>gAction Item Template</name>
+  <open_icon>../images/Icons/16x16/16x16_lists.gif</open_icon>
+  <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
+  <show_parameters_tab>1</show_parameters_tab>
+  <structure_view>tab view</structure_view>
+  <unlock_on_logout>0</unlock_on_logout>
+  <use_src_access>0</use_src_access>
+  <Relationships>
+   <Item type="Allowed Permission" id="63EBD9353363472F858541ADA44E358D" action="add">
+    <is_default>1</is_default>
+    <related_id keyed_name="gAction Item Templ New" type="Permission">0EACC3C885DB4B79B1816B2C13BD37CF</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+   </Item>
+  
+   <Item type="Can Add" id="3CEB762F58A1480480704761FEFED72F" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+   </Item>
+   <Item type="ItemType Life Cycle" id="F04F818134B6484B9DA7C3F6BDE127C5" action="add">
+    <related_id keyed_name="gAction Item Template" type="Life Cycle Map">EA8A21E377FC4A14AB03325728BDB5EE</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+   </Item>
+   <Item type="Property" id="F9BA177F4775417D8B1B742C7C4E65E4" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>200</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Action Sub Type</label>
+    <name>action_item_sub_type</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>31</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+    <stored_length>64</stored_length>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="003326B50A7D48D5B0512D96DA1D020E" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>250</column_width>
+    <data_source keyed_name="RelationshipType" type="ItemType" name="RelationshipType">471932C33B604C3099070F4106EE5024</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Target Relation for Actions</label>
+    <name>action_item_target_relationship</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="A2B1A0559AA44992AFC75A2B4A39B9EA" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_source keyed_name="gAction Item Types">2EE3D23C753C45C4A1D4AB2C7B485A0E</data_source>
+    <data_type>list</data_type>
+    <default_value xml:lang="en">generic_action</default_value>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <keyed_name_order>1</keyed_name_order>
+    <label xml:lang="en">Action Item Type</label>
+    <name>action_item_type</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="691C2EA1AE6A495EB9955AB9487FB006" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>200</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <label xml:lang="en">Use With Process</label>
+    <name>actions_process_type</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+    <stored_length>64</stored_length>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="B7DDF2EBF65140FCA060447C2C2F6D4E" action="add">
+    <column_alignment>center</column_alignment>
+    <column_width>100</column_width>
+    <data_type>boolean</data_type>
+    <default_value xml:lang="en">1</default_value>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Add related Action</label>
+    <name>is_add_related_action_items</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>51</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="6C59EA5A5529434DB2093B05ACC2809A" action="add">
+    <column_alignment>center</column_alignment>
+    <column_width>100</column_width>
+    <data_type>boolean</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Start related Action</label>
+    <name>is_start_related_action_items</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>52</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="A3EBE5CE579A42A8878CF2239B2C370F" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>200</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <keyed_name_order>2</keyed_name_order>
+    <label xml:lang="en">Template Name</label>
+    <name>name</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+    <stored_length>64</stored_length>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="TOC Access" id="25261D62BA1F4F1F9335C5B0C858E76F" action="add">
+    <category>Administration</category>
+    <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+   </Item>
+   <Item type="View" id="717A58FC54314F5480DFC381F6DBDC4F" action="add">
+    <client>js</client>
+    <related_id keyed_name="gAction Item Template" type="Form">6457C9D2829C400D92E36A49CBD0C8AD</related_id>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+    <type>default</type>
+   </Item></Relationships>
+ </Item>
+ <Item type="ItemType" id="7C93F0563E114E91BD27FD65C04AE397" action="edit">
+  <Relationships>
+   <Item type="Property" action="edit" where="source_id='7C93F0563E114E91BD27FD65C04AE397' and name='classification'">
+    <column_alignment>left</column_alignment>
+    <column_width>150</column_width>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Template Class</label>
+    <name>classification</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>5</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+    <stored_length>512</stored_length>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='7C93F0563E114E91BD27FD65C04AE397' and name='generation'">
+    <column_alignment>left</column_alignment>
+    <data_type>integer</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <name>generation</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='7C93F0563E114E91BD27FD65C04AE397' and name='owned_by_id'">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_source keyed_name="Identity" type="ItemType" name="Identity">E582AB17663F4EF28460015B2BE9E094</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Owner</label>
+    <name>owned_by_id</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='7C93F0563E114E91BD27FD65C04AE397' and name='state'">
+    <column_alignment>left</column_alignment>
+    <column_width>80</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Status</label>
+    <name>state</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>8</sort_order>
+    <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+    <stored_length>32</stored_length>
+    <track_history>0</track_history>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

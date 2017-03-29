@@ -1,0 +1,31 @@
+﻿<AML>
+ <Item type="List" id="F5594788AFB046DC9E8CFF7FFF11F9D5" action="add">
+  <name>gAction Item Priorities</name>
+  <Relationships>
+   <Item type="Value" id="211798972E5E4BE7A27E19896A1D8E1A" action="add">
+    <label xml:lang="en">Critical</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item Priorities" type="List">F5594788AFB046DC9E8CFF7FFF11F9D5</source_id>
+    <value>critical</value>
+   </Item>
+   <Item type="Value" id="10B5476C8F1343D8ABF3127365B68E9C" action="add">
+    <label xml:lang="en">High</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="gAction Item Priorities" type="List">F5594788AFB046DC9E8CFF7FFF11F9D5</source_id>
+    <value>high</value>
+   </Item>
+   <Item type="Value" id="0801CF7130794F18B14557016A36A213" action="add">
+    <label xml:lang="en">Low</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="gAction Item Priorities" type="List">F5594788AFB046DC9E8CFF7FFF11F9D5</source_id>
+    <value>low</value>
+   </Item>
+  
+   <Item type="Value" id="0DDD2EDE5DCB4EFEB0F065A1F7B58A84" action="add">
+    <label xml:lang="en">Medium</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="gAction Item Priorities" type="List">F5594788AFB046DC9E8CFF7FFF11F9D5</source_id>
+    <value>medium</value>
+   </Item></Relationships>
+ </Item>
+</AML>

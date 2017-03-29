@@ -1,0 +1,15 @@
+﻿<AML>
+ <Item type="Action" id="01E8F16555534DE9AC87DA0E15F6E3B5" action="add">
+  <item_query>&lt;Item type="{@type}" action="get"&gt;&lt;id&gt;&lt;xsl:value-of select="@id" /&gt;&lt;/id&gt;&lt;/Item&gt;</item_query>
+  <label xml:lang="en">Start Action</label>
+  <location>server</location>
+  <method keyed_name="gAction Item Start Action" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>gAction Item Start Action</name>
+   </Item>
+  </method>
+  <name>gAction Item Start Action</name>
+  <target>none</target>
+  <type>item</type>
+ </Item>
+</AML>

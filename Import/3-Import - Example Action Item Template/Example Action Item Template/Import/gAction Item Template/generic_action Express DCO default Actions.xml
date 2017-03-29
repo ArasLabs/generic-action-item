@@ -1,0 +1,22 @@
+﻿<AML>
+ <Item type="gAction Item Template" id="AB0E19884D7D44558E54726DA643AF6B" action="add">
+  <action_item_target_relationship keyed_name="Express DCO gAction Item" type="RelationshipType">AE3B95F1455B4D2FB1C82BB7CBB6FCA7</action_item_target_relationship>
+  <action_item_type>generic_action</action_item_type>
+  <actions_process_type>Express DCO</actions_process_type>
+  <is_add_related_action_items>1</is_add_related_action_items>
+  <is_start_related_action_items>0</is_start_related_action_items>
+  <name>Express DCO default Actions</name>
+  <owned_by_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</owned_by_id>
+  <Relationships>
+   <Item type="gAction Item Template Action" id="A4F4CDB56BD64094A4F28B7BF08666CA" action="add">
+    <action_due_date_offset_days>2</action_due_date_offset_days>
+    <action_item_description>Add more Action Items for each document owner once DCO is 'In Work'</action_item_description>
+    <action_priority>medium</action_priority>
+    <is_closing_notes_required>1</is_closing_notes_required>
+    <owned_by_id keyed_name="Owner" type="Identity">538B300BB2A347F396C436E9EEE1976C</owned_by_id>
+    <sort_order>1</sort_order>
+    <source_id keyed_name="generic_action Express DCO default Actions" type="gAction Item Template">AB0E19884D7D44558E54726DA643AF6B</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

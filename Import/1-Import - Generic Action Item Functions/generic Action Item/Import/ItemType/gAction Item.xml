@@ -1,0 +1,370 @@
+﻿<AML>
+ <Item type="ItemType" id="7EEAF247D7A54B8E83314BAD97D709E0" action="add">
+  <allow_private_permission>1</allow_private_permission>
+  <auto_search>0</auto_search>
+  <class_structure><![CDATA[<class id="1A3E0913010842AC8BDAD5F1D34F4171"><class id="BE18D513360D48D2A8E0D6670D763064" name="Ad Hoc" /><class id="A4CF2A72724044708B448317DEB3F6BF" name="Immediate Action" /><class id="CBB2EB24C0D247779BD5A9AD4070850F" name="Corrective Action" /><class id="84A1772826C9497BAC71BFAEF4015E9D" name="Disposition Action" /></class>]]></class_structure>
+  <default_page_size>30</default_page_size>
+  <enforce_discovery>1</enforce_discovery>
+  <hide_where_used>0</hide_where_used>
+  <implementation_type>table</implementation_type>
+  <instance_data>GACTION_ITEM</instance_data>
+  <is_dependent>0</is_dependent>
+  <is_relationship>0</is_relationship>
+  <is_versionable>0</is_versionable>
+  <label xml:lang="en">Action Item</label>
+  <label_plural xml:lang="en">Action Items</label_plural>
+  <large_icon>../images/Icons/32x32/32x32_check_list.gif</large_icon>
+  <manual_versioning>0</manual_versioning>
+  <maxrecords>500</maxrecords>
+  <name>gAction Item</name>
+  <open_icon>../images/Icons/16x16/16x16_lists.gif</open_icon>
+  <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
+  <show_parameters_tab>1</show_parameters_tab>
+  <structure_view>tab view</structure_view>
+  <unlock_on_logout>0</unlock_on_logout>
+  <use_src_access>0</use_src_access>
+  <Relationships>
+   <Item type="Allowed Permission" id="5D866D12323642D099EC2468E7DB937F" action="add">
+    <is_default>1</is_default>
+    <related_id keyed_name="gAction Item New" type="Permission">C6493D3DFA014F1CAD2F0991F8FEBEB8</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+   </Item>
+  
+   <Item type="Allowed Workflow" id="CDF1295DB41646DCB3760243308DED20" action="add">
+    <is_default>0</is_default>
+    <related_id keyed_name="gAction Item" type="Workflow Map">08C372EAB7DB47A498DDB5A4EF15CF5B</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+   </Item>
+   <Item type="Can Add" id="73B648D102EC4D7982F5D4C0E8C9C481" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+   </Item>
+   <Item type="Item Action" id="337D86392D374C3591E17757F475C004" action="add">
+    <related_id keyed_name="gAction Item Start Action" type="Action">01E8F16555534DE9AC87DA0E15F6E3B5</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+   </Item>
+   <Item type="ItemType Life Cycle" id="3F1C4370941A40678C1D99E3C2771BA9" action="add">
+    <related_id keyed_name="gAction Item" type="Life Cycle Map">618AFD7EEFF64B63BF41F569BE10A00A</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+   </Item>
+   <Item type="Property" id="96D36BBE6DF84B5EA5D27CD09B49E2BD" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>150</column_width>
+    <data_type>date</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Closed On</label>
+    <name>action_item_close_date</name>
+    <pattern>short_date_time</pattern>
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="B2E693C20C6F4A9D97CA150AEB05B384" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>250</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Closing Notes</label>
+    <name>action_item_closing_notes</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>12</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <stored_length>256</stored_length>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="23E690DC93C040C8A4BA4039DAE6200F" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>250</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <keyed_name_order>2</keyed_name_order>
+    <label xml:lang="en">Description</label>
+    <name>action_item_description</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>4</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <stored_length>256</stored_length>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="CA8BD5D049F142DCAF3972082B3B8882" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>100</column_width>
+    <data_type>date</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Due Date</label>
+    <name>action_item_due_date</name>
+    <pattern>short_date</pattern>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>6</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="C863A13C4E794A348F7ABBDC7DFAE385" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>100</column_width>
+    <data_source keyed_name="gAction Item Priorities">F5594788AFB046DC9E8CFF7FFF11F9D5</data_source>
+    <data_type>list</data_type>
+    <default_value xml:lang="en">medium</default_value>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Prio</label>
+    <name>action_item_priority</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>7</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="2FA29673CDC74336AF39B36F37D86075" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>150</column_width>
+    <data_type>date</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Started On</label>
+    <name>action_item_start_date</name>
+    <pattern>short_date_time</pattern>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>9</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="93CC198C9EAC4AF98B60567411250990" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_source keyed_name="gAction Item Types">2EE3D23C753C45C4A1D4AB2C7B485A0E</data_source>
+    <data_type>list</data_type>
+    <default_value xml:lang="en">ad_hoc_action</default_value>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <label xml:lang="en">Type</label>
+    <name>action_item_type</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>2</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="69C14F41D15A439ABFB3EDCFDB00649F" action="add">
+    <column_alignment>center</column_alignment>
+    <column_width>129</column_width>
+    <data_type>boolean</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Closing Notes Required</label>
+    <name>is_closing_notes_required</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>11</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="F6024862610A4672913D3EBABEDAE6BE" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>80</column_width>
+    <data_source keyed_name="gAction Item">B11D913112DF4027BAB16C3003BE744D</data_source>
+    <data_type>sequence</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <keyed_name_order>1</keyed_name_order>
+    <label xml:lang="en">Number</label>
+    <name>item_number</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>1</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="TOC Access" id="103A73CE0B124F7BBF37BAD829761529" action="add">
+    <category>Administration</category>
+    <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+   </Item>
+   <Item type="View" id="45C1CA4E8E9C4464B8421E290040EF01" action="add">
+    <client>js</client>
+    <related_id keyed_name="gAction Item" type="Form">6D7AA96209FC4621A8A56479C4AC32AA</related_id>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <type>default</type>
+   </Item></Relationships>
+ </Item>
+ <Item type="ItemType" id="7EEAF247D7A54B8E83314BAD97D709E0" action="edit">
+  <Relationships>
+   <Item type="Property" action="edit" where="source_id='7EEAF247D7A54B8E83314BAD97D709E0' and name='classification'">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Type</label>
+    <name>classification</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>1000</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <stored_length>512</stored_length>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='7EEAF247D7A54B8E83314BAD97D709E0' and name='created_on'">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_type>date</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <label xml:lang="en">Created On</label>
+    <name>created_on</name>
+    <pattern>short_date_time</pattern>
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>13</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='7EEAF247D7A54B8E83314BAD97D709E0' and name='generation'">
+    <column_alignment>left</column_alignment>
+    <data_type>integer</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <name>generation</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>7424</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='7EEAF247D7A54B8E83314BAD97D709E0' and name='managed_by_id'">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_source keyed_name="Identity" type="ItemType" name="Identity">E582AB17663F4EF28460015B2BE9E094</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Action Reviewers</label>
+    <name>managed_by_id</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>8</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='7EEAF247D7A54B8E83314BAD97D709E0' and name='owned_by_id'">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_source keyed_name="Identity" type="ItemType" name="Identity">E582AB17663F4EF28460015B2BE9E094</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Owner</label>
+    <name>owned_by_id</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>5</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='7EEAF247D7A54B8E83314BAD97D709E0' and name='state'">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Status</label>
+    <name>state</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>3</sort_order>
+    <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+    <stored_length>32</stored_length>
+    <track_history>0</track_history>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,22 @@
+﻿<AML>
+ <Item type="Method" id="EC64C3DBDDB640D2BBC93E680E1D1495" action="add">
+  <comments>called from any life cycle transitions that goes to --&gt; Closed</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA['System.Diagnostics.Debugger.Break()
+Dim actionItem As Item = Me.newItem(Me.GetType(),"get")
+actionItem.setID(Me.GetID())
+actionItem.setAttribute("select","is_closing_notes_required,action_item_closing_notes")
+actionItem = actionItem.apply()
+
+If actionItem.getProperty("is_closing_notes_required","0") = "1" Then
+  If actionItem.getProperty("action_item_closing_notes","") = "" Then
+    return actionItem.getInnovator().newError("Missing closing notes on this Action Item. Please add notes and try again.")
+  End If
+end if
+
+return Me
+]]></method_code>
+  <method_type>VB</method_type>
+  <name>gAction Item Check Closing Notes</name>
+ </Item>
+</AML>

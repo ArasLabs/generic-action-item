@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="Action" id="59A010C888354A7B80AEA7C06DA0E6B3" action="add">
+  <item_query>&lt;Item type="{@type}" action="get"&gt;&lt;id&gt;&lt;xsl:value-of select="@id" /&gt;&lt;/id&gt;&lt;/Item&gt;</item_query>
+  <location>server</location>
+  <method keyed_name="Start Express DCO Action Item" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>Start Express DCO Action Item</name>
+   </Item>
+  </method>
+  <name>Start Express DCO Action Item</name>
+  <target>none</target>
+  <type>item</type>
+ </Item>
+</AML>
