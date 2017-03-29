@@ -51,7 +51,7 @@ Project | Aras
 
 ## Usage
 
-See [generic Action Item Concepts v1.pdf](./Documentation/generic%20Action%20Item%20Concepts%20v1.pdf) for more information on using this project.
+See [generic Action Item Concepts v1-2(A10).pdf](./Documentation/generic%20Action%20Item%20Concepts%20v1-2(A10).pdf) for more information on using this project.
 
 ## Contributing
 
