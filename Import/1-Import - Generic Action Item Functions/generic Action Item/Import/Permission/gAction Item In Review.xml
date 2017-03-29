@@ -3,17 +3,6 @@
   <is_private>0</is_private>
   <name>gAction Item In Review</name>
   <Relationships>
-   <Item type="Access" id="D75BBA4EE91E4A038D134D6BE829AFB2" action="add">
-    <can_change_access>1</can_change_access>
-    <can_delete>0</can_delete>
-    <can_discover>1</can_discover>
-    <can_get>1</can_get>
-    <can_update>1</can_update>
-    <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
-    <show_permissions_warning>0</show_permissions_warning>
-    <sort_order>512</sort_order>
-    <source_id keyed_name="gAction Item In Review" type="Permission">F2F5052107A547208AF737F66C5DF360</source_id>
-   </Item>
    <Item type="Access" id="3228E438A9A44F69A27AFB552E440303" action="add">
     <can_change_access>1</can_change_access>
     <can_delete>0</can_delete>
@@ -25,18 +14,6 @@
     <sort_order>640</sort_order>
     <source_id keyed_name="gAction Item In Review" type="Permission">F2F5052107A547208AF737F66C5DF360</source_id>
    </Item>
-   <Item type="Access" id="FDA4BB4905AE4C96862DD97E041404DF" action="add">
-    <can_change_access>0</can_change_access>
-    <can_delete>0</can_delete>
-    <can_discover>1</can_discover>
-    <can_get>1</can_get>
-    <can_update>0</can_update>
-    <related_id keyed_name="All Employees" type="Identity">B32BD81D1AD04207BF1E61E39A4E0E13</related_id>
-    <show_permissions_warning>0</show_permissions_warning>
-    <sort_order>256</sort_order>
-    <source_id keyed_name="gAction Item In Review" type="Permission">F2F5052107A547208AF737F66C5DF360</source_id>
-   </Item>
-  
    <Item type="Access" id="B7FACB68453D4DC6A75C399775B6F1FF" action="add">
     <can_change_access>1</can_change_access>
     <can_delete>0</can_delete>
@@ -46,6 +23,32 @@
     <related_id keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</related_id>
     <show_permissions_warning>1</show_permissions_warning>
     <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item In Review" type="Permission">F2F5052107A547208AF737F66C5DF360</source_id>
+   </Item>
+   <Item type="Access" id="C8387C0C314E4F8A9A3431AB0D7024A2" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="gAction Item In Review" type="Permission">F2F5052107A547208AF737F66C5DF360</source_id>
+   </Item>
+   <Item type="Access" id="D75BBA4EE91E4A038D134D6BE829AFB2" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>512</sort_order>
     <source_id keyed_name="gAction Item In Review" type="Permission">F2F5052107A547208AF737F66C5DF360</source_id>
    </Item>
    <Item type="Access" id="DD0F718ECD5D423080D08F8A88502E1B" action="add">
@@ -63,20 +66,17 @@
     <sort_order>640</sort_order>
     <source_id keyed_name="gAction Item In Review" type="Permission">F2F5052107A547208AF737F66C5DF360</source_id>
    </Item>
-   <Item type="Access" id="C8387C0C314E4F8A9A3431AB0D7024A2" action="add">
+   <Item type="Access" id="FDA4BB4905AE4C96862DD97E041404DF" action="add">
     <can_change_access>0</can_change_access>
     <can_delete>0</can_delete>
     <can_discover>1</can_discover>
     <can_get>1</can_get>
     <can_update>0</can_update>
-    <related_id keyed_name="Owner" type="Identity">
-     <Item type="Identity" action="get" select="id">
-      <name>Owner</name>
-     </Item>
-    </related_id>
+    <related_id keyed_name="All Employees" type="Identity">B32BD81D1AD04207BF1E61E39A4E0E13</related_id>
     <show_permissions_warning>0</show_permissions_warning>
-    <sort_order>384</sort_order>
+    <sort_order>256</sort_order>
     <source_id keyed_name="gAction Item In Review" type="Permission">F2F5052107A547208AF737F66C5DF360</source_id>
-   </Item></Relationships>
+   </Item>
+  </Relationships>
  </Item>
 </AML>

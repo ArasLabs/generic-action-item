@@ -1,9 +1,10 @@
 ﻿<AML>
  <Item type="Form" id="6457C9D2829C400D92E36A49CBD0C8AD" action="add">
-  <height>290</height>
-  <name>gAction Item Template</name>
+  <category_form>0</category_form>
+  <height>200</height>
   <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
-  <width>910</width>
+  <width>900</width>
+  <name>gAction Item Template</name>
   <Relationships>
    <Item type="Body" id="8BBAF64102C94C3BB0C90E660CBD743B" action="add">
     <bg_attach>scroll</bg_attach>
@@ -26,14 +27,14 @@
       <label xml:lang="en">Action Sub Type</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
-      <name>action_item_sub_type</name>
       <propertytype_id keyed_name="action_item_sub_type" type="Property">F9BA177F4775417D8B1B742C7C4E65E4</propertytype_id>
       <sort_order>1408</sort_order>
       <source_id keyed_name="8BBAF64102C94C3BB0C90E660CBD743B" type="Body">8BBAF64102C94C3BB0C90E660CBD743B</source_id>
       <tab_index>31</tab_index>
       <tab_stop>1</tab_stop>
-      <x>600</x>
-      <y>55</y>
+      <x>540</x>
+      <y>50</y>
+      <name>action_item_sub_type</name>
      </Item>
      <Item type="Field" id="22DE2D42422C4BAC9BAB5C39E57C3AD2" action="add">
       <border_width>0</border_width>
@@ -48,14 +49,14 @@
       <label xml:lang="en">Add this Relationship to Process</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
-      <name>action_item_target_relationship</name>
       <propertytype_id keyed_name="action_item_target_relationship" type="Property">003326B50A7D48D5B0512D96DA1D020E</propertytype_id>
       <sort_order>640</sort_order>
       <source_id keyed_name="8BBAF64102C94C3BB0C90E660CBD743B" type="Body">8BBAF64102C94C3BB0C90E660CBD743B</source_id>
       <tab_index>60</tab_index>
       <tab_stop>1</tab_stop>
-      <x>225</x>
+      <x>165</x>
       <y>95</y>
+      <name>action_item_target_relationship</name>
      </Item>
      <Item type="Field" id="F5AE2A86801F430188B10E7689ADEBA6" action="add">
       <border_width>0</border_width>
@@ -69,14 +70,14 @@
       <label xml:lang="en">Action Item Type</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
-      <name>action_item_type</name>
       <propertytype_id keyed_name="action_item_type" type="Property">A2B1A0559AA44992AFC75A2B4A39B9EA</propertytype_id>
       <sort_order>768</sort_order>
       <source_id keyed_name="8BBAF64102C94C3BB0C90E660CBD743B" type="Body">8BBAF64102C94C3BB0C90E660CBD743B</source_id>
       <tab_index>50</tab_index>
       <tab_stop>0</tab_stop>
-      <x>600</x>
-      <y>15</y>
+      <x>540</x>
+      <y>10</y>
+      <name>action_item_type</name>
      </Item>
      <Item type="Field" id="4A2B4269D9B043399A63BACEA62A31A3" action="add">
       <border_width>0</border_width>
@@ -91,14 +92,14 @@
       <label xml:lang="en">Use With Process (ItemType Name)</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
-      <name>actions_process_type</name>
       <propertytype_id keyed_name="actions_process_type" type="Property">691C2EA1AE6A495EB9955AB9487FB006</propertytype_id>
       <sort_order>1536</sort_order>
       <source_id keyed_name="8BBAF64102C94C3BB0C90E660CBD743B" type="Body">8BBAF64102C94C3BB0C90E660CBD743B</source_id>
       <tab_index>40</tab_index>
       <tab_stop>1</tab_stop>
-      <x>224</x>
-      <y>55</y>
+      <x>165</x>
+      <y>50</y>
+      <name>actions_process_type</name>
      </Item>
      <Item type="Field" id="E0421F115E394270A54A028CAF076185" action="add">
       <border_width>0</border_width>
@@ -112,14 +113,14 @@
       <label xml:lang="en">Start related Action</label>
       <label_position>right</label_position>
       <list_no_blank>0</list_no_blank>
-      <name>is_start_related_action_items</name>
       <propertytype_id keyed_name="is_start_related_action_items" type="Property">6C59EA5A5529434DB2093B05ACC2809A</propertytype_id>
       <sort_order>1792</sort_order>
       <source_id keyed_name="8BBAF64102C94C3BB0C90E660CBD743B" type="Body">8BBAF64102C94C3BB0C90E660CBD743B</source_id>
       <tab_index>52</tab_index>
       <tab_stop>0</tab_stop>
       <x>225</x>
-      <y>135</y>
+      <y>140</y>
+      <name>is_start_related_action_items</name>
      </Item>
      <Item type="Field" id="74BBC92AAC0E4462B7DEADF3D89EC5C5" action="add">
       <field_type>html</field_type>
@@ -129,17 +130,18 @@
   {
     document.getElementById('ITEM_INFO_INTERNAL_SPAN').innerHTML = top.aras.uiGetItemInfoTable(document.itemType);
   }
-  window.attachEvent('onload', populate_ITEM_INFO_INTERNAL_SPAN);
+  window.addEventListener("load", populate_ITEM_INFO_INTERNAL_SPAN);
 </script>]]></html_code>
-      <is_disabled>0</is_disabled>
+      <is_disabled>1</is_disabled>
       <is_visible>1</is_visible>
       <list_no_blank>0</list_no_blank>
-      <name>item_info</name>
       <sort_order>512</sort_order>
       <source_id keyed_name="8BBAF64102C94C3BB0C90E660CBD743B" type="Body">8BBAF64102C94C3BB0C90E660CBD743B</source_id>
       <tab_stop>0</tab_stop>
       <x>0</x>
-      <y>0</y>
+      <y>-5</y>
+      <z_index>-1</z_index>
+      <name>item_info</name>
      </Item>
      <Item type="Field" id="E118EE42E33C4EF7B2F31B377A83EF63" action="add">
       <border_width>0</border_width>
@@ -154,14 +156,14 @@
       <label xml:lang="en">Template Name</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
-      <name>name</name>
       <propertytype_id keyed_name="name" type="Property">A3EBE5CE579A42A8878CF2239B2C370F</propertytype_id>
       <sort_order>384</sort_order>
       <source_id keyed_name="8BBAF64102C94C3BB0C90E660CBD743B" type="Body">8BBAF64102C94C3BB0C90E660CBD743B</source_id>
       <tab_index>3200</tab_index>
       <tab_stop>1</tab_stop>
-      <x>225</x>
-      <y>15</y>
+      <x>165</x>
+      <y>10</y>
+      <name>name</name>
      </Item>
      <Item type="Field" id="C2712995B2DC46B8933547BE746B1B0C" action="add">
       <border_width>0</border_width>
@@ -176,13 +178,13 @@
       <label xml:lang="en">Template Owner</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
-      <name>owned_by_id</name>
       <sort_order>896</sort_order>
       <source_id keyed_name="8BBAF64102C94C3BB0C90E660CBD743B" type="Body">8BBAF64102C94C3BB0C90E660CBD743B</source_id>
       <tab_index>100</tab_index>
       <tab_stop>0</tab_stop>
-      <x>600</x>
+      <x>540</x>
       <y>95</y>
+      <name>owned_by_id</name>
      </Item>
      <Item type="Field" id="672E48724AC84B63AB14720FDE91016E" action="add">
       <border_width>0</border_width>
@@ -196,19 +198,20 @@
       <label xml:lang="en">Status</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
-      <name>state</name>
       <sort_order>1280</sort_order>
       <source_id keyed_name="8BBAF64102C94C3BB0C90E660CBD743B" type="Body">8BBAF64102C94C3BB0C90E660CBD743B</source_id>
       <tab_index>110</tab_index>
       <tab_stop>0</tab_stop>
-      <x>85</x>
-      <y>15</y>
+      <x>15</x>
+      <y>100</y>
+      <name>state</name>
      </Item>
     </Relationships>
    </Item>
   </Relationships>
  </Item>
  <Item type="Field" id="C2712995B2DC46B8933547BE746B1B0C" action="edit">
+  <!-- Please note: this AML depends on the "gAction Item Template" ItemType. Please make sure it exists before running this. -->
   <propertytype_id>
    <Item type="Property" action="get" select="id">
     <name>owned_by_id</name>
@@ -217,6 +220,7 @@
   </propertytype_id>
  </Item>
  <Item type="Field" id="672E48724AC84B63AB14720FDE91016E" action="edit">
+  <!-- Please note: this AML depends on the "gAction Item Template" ItemType. Please make sure it exists before running this. -->
   <propertytype_id>
    <Item type="Property" action="get" select="id">
     <name>state</name>

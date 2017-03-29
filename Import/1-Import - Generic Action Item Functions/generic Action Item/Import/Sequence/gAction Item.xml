@@ -1,10 +1,10 @@
 ﻿<AML>
  <Item type="Sequence" id="B11D913112DF4027BAB16C3003BE744D" action="add">
   <initial_value>1</initial_value>
-  <name>gAction Item</name>
   <pad_to>5</pad_to>
   <pad_with>0</pad_with>
   <prefix>AI-</prefix>
   <step>1</step>
+  <name>gAction Item</name>
  </Item>
 </AML>

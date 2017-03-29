@@ -12,12 +12,14 @@ This project and the following release notes have been migrated from the old Ara
 
 Release | Notes
 --------|--------
+[v2](https://github.com/ArasLabs/generic-action-item/releases/tag/v2) | Generic Action Item Solution package and Documentation for Aras 10 + 11
 [v1](https://github.com/ArasLabs/generic-action-item/releases/tag/v1) | Generic Action Item Solution package and Documentation
 
 #### Supported Aras Versions
 
 Project | Aras
 --------|------
+[v2](https://github.com/ArasLabs/generic-action-item/releases/tag/v2) | 10 SPx, 11 SPx
 [v1](https://github.com/ArasLabs/generic-action-item/releases/tag/v1) | 9.3 SPx, 9.4 SPx
 
 ## Installation

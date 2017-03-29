@@ -9,7 +9,6 @@
   <inc_related_key_name>1</inc_related_key_name>
   <is_list_type>0</is_list_type>
   <label xml:lang="en">SignOffs</label>
-  <name>gAction Item Signoffs</name>
   <new_show_related>0</new_show_related>
   <related_notnull>0</related_notnull>
   <related_option>2</related_option>
@@ -24,16 +23,17 @@
     <is_dependent>0</is_dependent>
     <is_relationship>1</is_relationship>
     <is_versionable>0</is_versionable>
-    <manual_versioning>0</manual_versioning>
-    <name>gAction Item Signoffs</name>
     <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
     <show_parameters_tab>1</show_parameters_tab>
     <unlock_on_logout>0</unlock_on_logout>
     <use_src_access>1</use_src_access>
-    </Item>
+    <name>gAction Item Signoffs</name>
+    <Relationships></Relationships>
+   </Item>
   </relationship_id>
   <sort_order>10</sort_order>
   <source_id keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</source_id>
+  <name>gAction Item Signoffs</name>
   <Relationships>
    <Item type="Relationship View" id="135092DCE01D41F3B0FB59B7180CB7A2" action="add">
     <form keyed_name="Workflow Signoffs" type="Form">41449A928F3341149788B4A17F164845</form>
@@ -47,26 +47,6 @@
    </Item>
   </Relationships>
  </Item>
- <Item type="ItemType" id="B3C975E7A8FF4AB5BA3E16918D5B8652" action="edit">
-  <Relationships>
-   <Item type="Property" action="edit" where="source_id='B3C975E7A8FF4AB5BA3E16918D5B8652' and name='generation'">
-    <column_alignment>left</column_alignment>
-    <data_type>integer</data_type>
-    <is_hidden>1</is_hidden>
-    <is_hidden2>1</is_hidden2>
-    <is_indexed>0</is_indexed>
-    <is_keyed>0</is_keyed>
-    <is_multi_valued>0</is_multi_valued>
-    <is_required>0</is_required>
-    <name>generation</name>
-    <range_inclusive>0</range_inclusive>
-    <readonly>1</readonly>
-    <sort_order>2432</sort_order>
-    <source_id keyed_name="gAction Item Signoffs" type="ItemType" name="gAction Item Signoffs">B3C975E7A8FF4AB5BA3E16918D5B8652</source_id>
-    <track_history>0</track_history>
-   </Item>
-  </Relationships>
- </Item>
- <Item type="View" action="delete" where="source_id='B3C975E7A8FF4AB5BA3E16918D5B8652'"></Item>
- <Item type="Form" action="delete" where="name='gAction Item Signoffs'"></Item>
+ <Item type="View" action="delete" where="source_id='B3C975E7A8FF4AB5BA3E16918D5B8652'" />
+ <Item type="Form" action="delete" where="name='gAction Item Signoffs'" />
 </AML>

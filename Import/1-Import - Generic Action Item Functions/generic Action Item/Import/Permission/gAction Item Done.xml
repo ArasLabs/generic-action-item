@@ -14,18 +14,6 @@
     <sort_order>256</sort_order>
     <source_id keyed_name="gAction Item Done" type="Permission">E070D18D64CE4D7696F294725806A8C2</source_id>
    </Item>
-   <Item type="Access" id="E78D8390E81947A5BDB021C0C23D24A6" action="add">
-    <can_change_access>1</can_change_access>
-    <can_delete>1</can_delete>
-    <can_discover>1</can_discover>
-    <can_get>1</can_get>
-    <can_update>1</can_update>
-    <related_id keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</related_id>
-    <show_permissions_warning>1</show_permissions_warning>
-    <sort_order>128</sort_order>
-    <source_id keyed_name="gAction Item Done" type="Permission">E070D18D64CE4D7696F294725806A8C2</source_id>
-   </Item>
-  
    <Item type="Access" id="7C51213551224FE7AB2167AE28AFB02C" action="add">
     <can_change_access>0</can_change_access>
     <can_delete>0</can_delete>
@@ -40,6 +28,18 @@
     <show_permissions_warning>0</show_permissions_warning>
     <sort_order>384</sort_order>
     <source_id keyed_name="gAction Item Done" type="Permission">E070D18D64CE4D7696F294725806A8C2</source_id>
-   </Item></Relationships>
+   </Item>
+   <Item type="Access" id="E78D8390E81947A5BDB021C0C23D24A6" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</related_id>
+    <show_permissions_warning>1</show_permissions_warning>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="gAction Item Done" type="Permission">E070D18D64CE4D7696F294725806A8C2</source_id>
+   </Item>
+  </Relationships>
  </Item>
 </AML>

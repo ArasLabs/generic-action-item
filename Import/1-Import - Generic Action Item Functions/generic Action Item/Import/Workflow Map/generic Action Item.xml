@@ -1,34 +1,33 @@
 ﻿<AML>
  <Item type="Workflow Map" id="08C372EAB7DB47A498DDB5A4EF15CF5B" action="add">
   <label xml:lang="en">Action Item</label>
-  <name>gAction Item</name>
-  <node_bg_color></node_bg_color>
-  <node_label1_color></node_label1_color>
+  <node_bg_color>       </node_bg_color>
+  <node_label1_color>       </node_label1_color>
   <node_label1_font></node_label1_font>
-  <node_label2_color></node_label2_color>
+  <node_label2_color>       </node_label2_color>
   <node_label2_font></node_label2_font>
-  <node_name_color></node_name_color>
+  <node_name_color>       </node_name_color>
   <node_name_font></node_name_font>
   <node_size></node_size>
   <process_owner>6FD2EF63122F40B3B572CC1516F80D23</process_owner>
-  <transition_line_color></transition_line_color>
-  <transition_name_color></transition_name_color>
+  <transition_line_color>       </transition_line_color>
+  <transition_name_color>       </transition_name_color>
   <transition_name_font></transition_name_font>
+  <name>gAction Item</name>
   <Relationships>
-   <Item type="Workflow Map Activity" id="FC74292A06F242458F0C9FFDC8B886B1" action="add">
+   <Item type="Workflow Map Activity" action="add">
     <related_id keyed_name="Closed" type="Activity Template">
      <Item type="Activity Template" id="E9B9CB979D6141DA848FFDF0277CF5A8" action="add">
       <can_delegate>0</can_delegate>
       <can_refuse>0</can_refuse>
       <consolidate_ondelegate>0</consolidate_ondelegate>
       <expected_duration>0</expected_duration>
-      <icon>../images/Icons/16x16/16x16_redx.gif</icon>
+      <icon>../Images/Delete.svg</icon>
       <is_auto>1</is_auto>
       <is_end>1</is_end>
       <is_start>0</is_start>
       <label xml:lang="en">Closed</label>
       <message xml:lang="en">Workflow End</message>
-      <name>Closed</name>
       <priority>1</priority>
       <reminder_count>0</reminder_count>
       <reminder_interval>0</reminder_interval>
@@ -37,6 +36,7 @@
       <wait_for_all_votes>0</wait_for_all_votes>
       <x>425</x>
       <y>65</y>
+      <name>Closed</name>
       <Relationships>
        <Item type="Activity Template Transition" id="3B0504A922504E61B69E1F9636378AE1" action="add">
         <controlled_itemtype keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</controlled_itemtype>
@@ -65,28 +65,67 @@
     <sort_order>128</sort_order>
     <source_id keyed_name="gAction Item" type="Workflow Map">08C372EAB7DB47A498DDB5A4EF15CF5B</source_id>
    </Item>
-   <Item type="Workflow Map Activity" id="3E5EE988D8104FD8974483CDCA9C6742" action="add">
+   <Item type="Workflow Map Activity" action="add">
+    <related_id keyed_name="Start" type="Activity Template">
+     <Item type="Activity Template" id="10FB3770DA9D4DDFA846475133FEC8AB" action="add">
+      <can_delegate>0</can_delegate>
+      <can_refuse>0</can_refuse>
+      <consolidate_ondelegate>0</consolidate_ondelegate>
+      <expected_duration>0</expected_duration>
+      <icon>../Images/WorkflowStart.svg</icon>
+      <is_auto>1</is_auto>
+      <is_end>0</is_end>
+      <is_start>1</is_start>
+      <label xml:lang="en">Start</label>
+      <message xml:lang="en">Workflow Start</message>
+      <priority>2</priority>
+      <reminder_count>0</reminder_count>
+      <reminder_interval>0</reminder_interval>
+      <timeout_duration>0</timeout_duration>
+      <wait_for_all_inputs>0</wait_for_all_inputs>
+      <wait_for_all_votes>0</wait_for_all_votes>
+      <x>14</x>
+      <y>65</y>
+      <name>Start</name>
+      <Relationships>
+       <Item type="Workflow Map Path" id="B50C4151CD35448BBFE1A8EAA2C2D4AC" action="add">
+        <authentication>none</authentication>
+        <is_default>1</is_default>
+        <is_override>0</is_override>
+        <name>Go</name>
+        <related_id>1EB1E4EBE516489FB241FB288BE2ED6C</related_id>
+        <segments></segments>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="Start" type="Activity Template">10FB3770DA9D4DDFA846475133FEC8AB</source_id>
+        <x>68</x>
+        <y>15</y>
+       </Item>
+      </Relationships>
+     </Item>
+    </related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="gAction Item" type="Workflow Map">08C372EAB7DB47A498DDB5A4EF15CF5B</source_id>
+   </Item>
+   <Item type="Workflow Map Activity" action="add">
     <related_id keyed_name="Open" type="Activity Template">
      <Item type="Activity Template" id="1EB1E4EBE516489FB241FB288BE2ED6C" action="add">
       <can_delegate>0</can_delegate>
       <can_refuse>0</can_refuse>
       <consolidate_ondelegate>0</consolidate_ondelegate>
-      <icon>../images/Icons/20x20/20x22_gray_ball.gif</icon>
+      <icon>../Images/WorkflowNode.svg</icon>
       <is_auto>0</is_auto>
       <is_end>0</is_end>
       <is_start>0</is_start>
       <label xml:lang="en">Open</label>
       <managed_by_id keyed_name="Owner" type="Identity">538B300BB2A347F396C436E9EEE1976C</managed_by_id>
       <message xml:lang="en">Please start your work ...</message>
-      <name>Open</name>
       <wait_for_all_inputs>0</wait_for_all_inputs>
       <wait_for_all_votes>0</wait_for_all_votes>
       <x>201</x>
       <y>65</y>
+      <name>Open</name>
       <Relationships>
        <Item type="Activity Template Assignment" id="0CEE41EB7C5C452CBC0C5EAED76924B6" action="add">
-        <for_all_members>0</for_all_members>
-        <is_required>1</is_required>
         <related_id keyed_name="Owner" type="Identity">
          <Item type="Identity" action="get" select="id">
           <name>Owner</name>
@@ -94,6 +133,8 @@
         </related_id>
         <sort_order>128</sort_order>
         <source_id keyed_name="Open" type="Activity Template">1EB1E4EBE516489FB241FB288BE2ED6C</source_id>
+        <is_required>1</is_required>
+        <for_all_members>0</for_all_members>
         <voting_weight>100</voting_weight>
        </Item>
        <Item type="Activity Template Transition" id="5ACE03A93ED144A0AA16A6D0568F886A" action="add">
@@ -123,6 +164,19 @@
         <x>46</x>
         <y>-2</y>
        </Item>
+       <Item type="Workflow Map Path" id="A09F5D3B72044105A4829E5CB32FE2E9" action="add">
+        <authentication>none</authentication>
+        <is_default>0</is_default>
+        <is_override>0</is_override>
+        <label xml:lang="en">Submit To Review</label>
+        <name>Submit To Review</name>
+        <related_id>C814EFF2076A44A68D6126D8E11861B4</related_id>
+        <segments></segments>
+        <sort_order>256</sort_order>
+        <source_id keyed_name="Open" type="Activity Template">1EB1E4EBE516489FB241FB288BE2ED6C</source_id>
+        <x>31</x>
+        <y>43</y>
+       </Item>
        <Item type="Workflow Map Path" id="D90D961862E14086BDA78966DC957B8B" action="add">
         <authentication>password</authentication>
         <is_default>0</is_default>
@@ -136,117 +190,32 @@
         <x>-87</x>
         <y>-14</y>
        </Item>
-      
-       <Item type="Workflow Map Path" id="A09F5D3B72044105A4829E5CB32FE2E9" action="add">
-        <authentication>none</authentication>
-        <is_default>0</is_default>
-        <is_override>0</is_override>
-        <label xml:lang="en">Submit To Review</label>
-        <name>Submit To Review</name>
-        <related_id>C814EFF2076A44A68D6126D8E11861B4</related_id>
-        <segments></segments>
-        <sort_order>256</sort_order>
-        <source_id keyed_name="Open" type="Activity Template">1EB1E4EBE516489FB241FB288BE2ED6C</source_id>
-        <x>31</x>
-        <y>43</y>
-       </Item></Relationships>
+      </Relationships>
      </Item>
     </related_id>
     <sort_order>384</sort_order>
     <source_id keyed_name="gAction Item" type="Workflow Map">08C372EAB7DB47A498DDB5A4EF15CF5B</source_id>
    </Item>
-   <Item type="Workflow Map Activity" id="66D42DF069354E259A8EF5412CB3C454" action="add">
-    <related_id keyed_name="Reject Review" type="Activity Template">
-     <Item type="Activity Template" id="0E8FC02DA3D4460685336D61DCF7F131" action="add">
-      <can_delegate>0</can_delegate>
-      <can_refuse>0</can_refuse>
-      <consolidate_ondelegate>0</consolidate_ondelegate>
-      <icon>../images/Icons/20x20/20x22_gray_ball.gif</icon>
-      <is_auto>0</is_auto>
-      <is_end>0</is_end>
-      <is_start>0</is_start>
-      <label xml:lang="en">Reject Review</label>
-      <message xml:lang="en">Review reject reasons ...</message>
-      <name>Reject Review</name>
-      <wait_for_all_inputs>0</wait_for_all_inputs>
-      <wait_for_all_votes>0</wait_for_all_votes>
-      <x>130</x>
-      <y>-2</y>
-      <Relationships>
-       <Item type="Activity Template Assignment" id="9B30AD7C51C246A5BE16711F26441A1A" action="add">
-        <for_all_members>0</for_all_members>
-        <is_required>0</is_required>
-        <related_id keyed_name="Creator" type="Identity">
-         <Item type="Identity" action="get" select="id">
-          <name>Creator</name>
-         </Item>
-        </related_id>
-        <sort_order>128</sort_order>
-        <source_id keyed_name="Reject Review" type="Activity Template">0E8FC02DA3D4460685336D61DCF7F131</source_id>
-        <voting_weight>100</voting_weight>
-       </Item>
-       <Item type="Activity Template Transition" id="72BC6AD92135427EA4C514CD0CA20BBC" action="add">
-        <controlled_itemtype keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</controlled_itemtype>
-        <event>on_activate</event>
-        <related_id keyed_name="B8EF45B02C834BA6A76B8BA0D0AF247F" type="Life Cycle Transition">B8EF45B02C834BA6A76B8BA0D0AF247F</related_id>
-        <sort_order>128</sort_order>
-        <source_id keyed_name="Reject Review" type="Activity Template">0E8FC02DA3D4460685336D61DCF7F131</source_id>
-       </Item>
-       <Item type="Workflow Map Path" id="009F1B5DD1CD4A108A82FC391B0E00B0" action="add">
-        <authentication>password</authentication>
-        <is_default>0</is_default>
-        <is_override>0</is_override>
-        <label xml:lang="en">Cancel Action</label>
-        <name>Cancel Action</name>
-        <related_id>E9B9CB979D6141DA848FFDF0277CF5A8</related_id>
-        <segments>336,15</segments>
-        <sort_order>256</sort_order>
-        <source_id keyed_name="Reject Review" type="Activity Template">0E8FC02DA3D4460685336D61DCF7F131</source_id>
-        <x>116</x>
-        <y>19</y>
-       </Item>
-      
-       <Item type="Workflow Map Path" id="963423A4B2A74C3BBE80AF18D0281DBF" action="add">
-        <authentication>none</authentication>
-        <is_default>1</is_default>
-        <is_override>0</is_override>
-        <label xml:lang="en">Start New</label>
-        <name>start new</name>
-        <related_id>1EB1E4EBE516489FB241FB288BE2ED6C</related_id>
-        <segments>205,24</segments>
-        <sort_order>128</sort_order>
-        <source_id keyed_name="Reject Review" type="Activity Template">0E8FC02DA3D4460685336D61DCF7F131</source_id>
-        <x>-19</x>
-        <y>-46</y>
-       </Item></Relationships>
-     </Item>
-    </related_id>
-    <sort_order>640</sort_order>
-    <source_id keyed_name="gAction Item" type="Workflow Map">08C372EAB7DB47A498DDB5A4EF15CF5B</source_id>
-   </Item>
-  
-   <Item type="Workflow Map Activity" id="2B10E37E47054BC8AE2FF177F58F3236" action="add">
+   <Item type="Workflow Map Activity" action="add">
     <related_id keyed_name="Review Action Item" type="Activity Template">
      <Item type="Activity Template" id="C814EFF2076A44A68D6126D8E11861B4" action="add">
       <can_delegate>1</can_delegate>
       <can_refuse>0</can_refuse>
       <consolidate_ondelegate>0</consolidate_ondelegate>
-      <icon>../images/Icons/20x20/20x22_gray_ball.gif</icon>
+      <icon>../Images/WorkflowNode.svg</icon>
       <is_auto>0</is_auto>
       <is_end>0</is_end>
       <is_start>0</is_start>
       <label xml:lang="en">Review Action Item</label>
       <managed_by_id keyed_name="Manager" type="Identity">9200A800443E4A5AAA80D0BCE5760307</managed_by_id>
       <message xml:lang="en">Please Review if Action is complete ...</message>
-      <name>Review Action Item</name>
       <wait_for_all_inputs>0</wait_for_all_inputs>
       <wait_for_all_votes>0</wait_for_all_votes>
       <x>285</x>
       <y>165</y>
+      <name>Review Action Item</name>
       <Relationships>
        <Item type="Activity Template Assignment" id="D6AD277C000644EC9E2629AC8468DEDC" action="add">
-        <for_all_members>0</for_all_members>
-        <is_required>1</is_required>
         <related_id keyed_name="Manager" type="Identity">
          <Item type="Identity" action="get" select="id">
           <name>Manager</name>
@@ -254,6 +223,8 @@
         </related_id>
         <sort_order>128</sort_order>
         <source_id keyed_name="Review Action Item" type="Activity Template">C814EFF2076A44A68D6126D8E11861B4</source_id>
+        <is_required>1</is_required>
+        <for_all_members>0</for_all_members>
         <voting_weight>100</voting_weight>
        </Item>
        <Item type="Activity Template Transition" id="150D12CCF6C741129B6920BA96B6B942" action="add">
@@ -262,6 +233,19 @@
         <related_id keyed_name="92F99BE564EF43B59503EE1527383C28" type="Life Cycle Transition">92F99BE564EF43B59503EE1527383C28</related_id>
         <sort_order>128</sort_order>
         <source_id keyed_name="Review Action Item" type="Activity Template">C814EFF2076A44A68D6126D8E11861B4</source_id>
+       </Item>
+       <Item type="Workflow Map Path" id="6ECEE826BF8A488790B3D88A9057B607" action="add">
+        <authentication>password</authentication>
+        <is_default>0</is_default>
+        <is_override>0</is_override>
+        <label xml:lang="en">Close Action Item</label>
+        <name>Close Action From Review</name>
+        <related_id>E9B9CB979D6141DA848FFDF0277CF5A8</related_id>
+        <segments></segments>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="Review Action Item" type="Activity Template">C814EFF2076A44A68D6126D8E11861B4</source_id>
+        <x>52</x>
+        <y>-26</y>
        </Item>
        <Item type="Workflow Map Path" id="E7FA3AC21B74442C953DF5E3DA349E2E" action="add">
         <authentication>none</authentication>
@@ -276,65 +260,81 @@
         <x>-127</x>
         <y>-8</y>
        </Item>
-      
-       <Item type="Workflow Map Path" id="6ECEE826BF8A488790B3D88A9057B607" action="add">
-        <authentication>password</authentication>
-        <is_default>0</is_default>
-        <is_override>0</is_override>
-        <label xml:lang="en">Close Action Item</label>
-        <name>Close Action From Review</name>
-        <related_id>E9B9CB979D6141DA848FFDF0277CF5A8</related_id>
-        <segments></segments>
-        <sort_order>128</sort_order>
-        <source_id keyed_name="Review Action Item" type="Activity Template">C814EFF2076A44A68D6126D8E11861B4</source_id>
-        <x>52</x>
-        <y>-26</y>
-       </Item></Relationships>
+      </Relationships>
      </Item>
     </related_id>
     <sort_order>512</sort_order>
     <source_id keyed_name="gAction Item" type="Workflow Map">08C372EAB7DB47A498DDB5A4EF15CF5B</source_id>
    </Item>
-   <Item type="Workflow Map Activity" id="3E7000771AC04471BBD7CCDADD26545D" action="add">
-    <related_id keyed_name="Start" type="Activity Template">
-     <Item type="Activity Template" id="10FB3770DA9D4DDFA846475133FEC8AB" action="add">
+   <Item type="Workflow Map Activity" action="add">
+    <related_id keyed_name="Reject Review" type="Activity Template">
+     <Item type="Activity Template" id="0E8FC02DA3D4460685336D61DCF7F131" action="add">
       <can_delegate>0</can_delegate>
       <can_refuse>0</can_refuse>
       <consolidate_ondelegate>0</consolidate_ondelegate>
-      <expected_duration>0</expected_duration>
-      <icon>../images/Icons/16x16/16x16_arrow_right.gif</icon>
-      <is_auto>1</is_auto>
+      <icon>../Images/WorkflowNode.svg</icon>
+      <is_auto>0</is_auto>
       <is_end>0</is_end>
-      <is_start>1</is_start>
-      <label xml:lang="en">Start</label>
-      <message xml:lang="en">Workflow Start</message>
-      <name>Start</name>
-      <priority>2</priority>
-      <reminder_count>0</reminder_count>
-      <reminder_interval>0</reminder_interval>
-      <timeout_duration>0</timeout_duration>
+      <is_start>0</is_start>
+      <label xml:lang="en">Reject Review</label>
+      <message xml:lang="en">Review reject reasons ...</message>
       <wait_for_all_inputs>0</wait_for_all_inputs>
       <wait_for_all_votes>0</wait_for_all_votes>
-      <x>14</x>
-      <y>65</y>
+      <x>130</x>
+      <y>-2</y>
+      <name>Reject Review</name>
       <Relationships>
-       <Item type="Workflow Map Path" id="B50C4151CD35448BBFE1A8EAA2C2D4AC" action="add">
+       <Item type="Activity Template Assignment" id="9B30AD7C51C246A5BE16711F26441A1A" action="add">
+        <related_id keyed_name="Creator" type="Identity">
+         <Item type="Identity" action="get" select="id">
+          <name>Creator</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="Reject Review" type="Activity Template">0E8FC02DA3D4460685336D61DCF7F131</source_id>
+        <is_required>0</is_required>
+        <for_all_members>0</for_all_members>
+        <voting_weight>100</voting_weight>
+       </Item>
+       <Item type="Activity Template Transition" id="72BC6AD92135427EA4C514CD0CA20BBC" action="add">
+        <controlled_itemtype keyed_name="gAction Item" type="ItemType" name="gAction Item">7EEAF247D7A54B8E83314BAD97D709E0</controlled_itemtype>
+        <event>on_activate</event>
+        <related_id keyed_name="B8EF45B02C834BA6A76B8BA0D0AF247F" type="Life Cycle Transition">B8EF45B02C834BA6A76B8BA0D0AF247F</related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="Reject Review" type="Activity Template">0E8FC02DA3D4460685336D61DCF7F131</source_id>
+       </Item>
+       <Item type="Workflow Map Path" id="963423A4B2A74C3BBE80AF18D0281DBF" action="add">
         <authentication>none</authentication>
         <is_default>1</is_default>
         <is_override>0</is_override>
-        <name>Go</name>
+        <label xml:lang="en">Start New</label>
+        <name>start new</name>
         <related_id>1EB1E4EBE516489FB241FB288BE2ED6C</related_id>
-        <segments></segments>
+        <segments>205,24</segments>
         <sort_order>128</sort_order>
-        <source_id keyed_name="Start" type="Activity Template">10FB3770DA9D4DDFA846475133FEC8AB</source_id>
-        <x>68</x>
-        <y>15</y>
+        <source_id keyed_name="Reject Review" type="Activity Template">0E8FC02DA3D4460685336D61DCF7F131</source_id>
+        <x>-19</x>
+        <y>-46</y>
+       </Item>
+       <Item type="Workflow Map Path" id="009F1B5DD1CD4A108A82FC391B0E00B0" action="add">
+        <authentication>password</authentication>
+        <is_default>0</is_default>
+        <is_override>0</is_override>
+        <label xml:lang="en">Cancel Action</label>
+        <name>Cancel Action</name>
+        <related_id>E9B9CB979D6141DA848FFDF0277CF5A8</related_id>
+        <segments>336,15</segments>
+        <sort_order>256</sort_order>
+        <source_id keyed_name="Reject Review" type="Activity Template">0E8FC02DA3D4460685336D61DCF7F131</source_id>
+        <x>116</x>
+        <y>19</y>
        </Item>
       </Relationships>
      </Item>
     </related_id>
-    <sort_order>256</sort_order>
+    <sort_order>640</sort_order>
     <source_id keyed_name="gAction Item" type="Workflow Map">08C372EAB7DB47A498DDB5A4EF15CF5B</source_id>
-   </Item></Relationships>
+   </Item>
+  </Relationships>
  </Item>
 </AML>

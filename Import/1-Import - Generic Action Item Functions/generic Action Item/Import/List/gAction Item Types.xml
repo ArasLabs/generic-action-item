@@ -14,6 +14,12 @@
     <source_id keyed_name="gAction Item Types" type="List">2EE3D23C753C45C4A1D4AB2C7B485A0E</source_id>
     <value>corrective_action</value>
    </Item>
+   <Item type="Value" id="985A0046B30045C897DA40A5724B990D" action="add">
+    <label xml:lang="en">Immediate Action</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="gAction Item Types" type="List">2EE3D23C753C45C4A1D4AB2C7B485A0E</source_id>
+    <value>immediate_action</value>
+   </Item>
    <Item type="Value" id="A149D59F67A2495895EB740280B8A75C" action="add">
     <label xml:lang="en">Dispo Action</label>
     <sort_order>512</sort_order>
@@ -26,12 +32,6 @@
     <source_id keyed_name="gAction Item Types" type="List">2EE3D23C753C45C4A1D4AB2C7B485A0E</source_id>
     <value>generic_action</value>
    </Item>
-  
-   <Item type="Value" id="985A0046B30045C897DA40A5724B990D" action="add">
-    <label xml:lang="en">Immediate Action</label>
-    <sort_order>384</sort_order>
-    <source_id keyed_name="gAction Item Types" type="List">2EE3D23C753C45C4A1D4AB2C7B485A0E</source_id>
-    <value>immediate_action</value>
-   </Item></Relationships>
+  </Relationships>
  </Item>
 </AML>

@@ -3,6 +3,32 @@
   <is_private>0</is_private>
   <name>gAction Item New</name>
   <Relationships>
+   <Item type="Access" id="30E1BA5AC7E1425694B2C6A5424CA7F5" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Creator" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Creator</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="gAction Item New" type="Permission">C6493D3DFA014F1CAD2F0991F8FEBEB8</source_id>
+   </Item>
+   <Item type="Access" id="3E5612395C34463F9DAE40FB1C8F34D9" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</related_id>
+    <show_permissions_warning>1</show_permissions_warning>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="gAction Item New" type="Permission">C6493D3DFA014F1CAD2F0991F8FEBEB8</source_id>
+   </Item>
    <Item type="Access" id="408D8AAEB1054F3984EC244956E383EB" action="add">
     <can_change_access>1</can_change_access>
     <can_delete>1</can_delete>
@@ -25,32 +51,6 @@
     <sort_order>896</sort_order>
     <source_id keyed_name="gAction Item New" type="Permission">C6493D3DFA014F1CAD2F0991F8FEBEB8</source_id>
    </Item>
-  
-   <Item type="Access" id="3E5612395C34463F9DAE40FB1C8F34D9" action="add">
-    <can_change_access>1</can_change_access>
-    <can_delete>1</can_delete>
-    <can_discover>1</can_discover>
-    <can_get>1</can_get>
-    <can_update>1</can_update>
-    <related_id keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</related_id>
-    <show_permissions_warning>1</show_permissions_warning>
-    <sort_order>640</sort_order>
-    <source_id keyed_name="gAction Item New" type="Permission">C6493D3DFA014F1CAD2F0991F8FEBEB8</source_id>
-   </Item>
-   <Item type="Access" id="30E1BA5AC7E1425694B2C6A5424CA7F5" action="add">
-    <can_change_access>0</can_change_access>
-    <can_delete>1</can_delete>
-    <can_discover>1</can_discover>
-    <can_get>1</can_get>
-    <can_update>1</can_update>
-    <related_id keyed_name="Creator" type="Identity">
-     <Item type="Identity" action="get" select="id">
-      <name>Creator</name>
-     </Item>
-    </related_id>
-    <show_permissions_warning>0</show_permissions_warning>
-    <sort_order>512</sort_order>
-    <source_id keyed_name="gAction Item New" type="Permission">C6493D3DFA014F1CAD2F0991F8FEBEB8</source_id>
-   </Item></Relationships>
+  </Relationships>
  </Item>
 </AML>

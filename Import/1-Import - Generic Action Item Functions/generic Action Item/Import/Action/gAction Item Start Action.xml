@@ -8,8 +8,8 @@
     <name>gAction Item Start Action</name>
    </Item>
   </method>
-  <name>gAction Item Start Action</name>
   <target>none</target>
   <type>item</type>
+  <name>gAction Item Start Action</name>
  </Item>
 </AML>

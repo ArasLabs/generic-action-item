@@ -9,7 +9,6 @@
   <inc_related_key_name>1</inc_related_key_name>
   <is_list_type>0</is_list_type>
   <label xml:lang="en">Template Actions</label>
-  <name>gAction Item Template Action</name>
   <new_show_related>0</new_show_related>
   <related_notnull>0</related_notnull>
   <related_option>2</related_option>
@@ -24,12 +23,11 @@
     <is_dependent>0</is_dependent>
     <is_relationship>1</is_relationship>
     <is_versionable>0</is_versionable>
-    <manual_versioning>0</manual_versioning>
-    <name>gAction Item Template Action</name>
     <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
     <show_parameters_tab>1</show_parameters_tab>
     <unlock_on_logout>0</unlock_on_logout>
     <use_src_access>1</use_src_access>
+    <name>gAction Item Template Action</name>
     <Relationships>
      <Item type="Property" id="6B01DAE27DFC4D4A96A212FC0C4F5F86" action="add">
       <column_alignment>center</column_alignment>
@@ -42,12 +40,12 @@
       <is_multi_valued>0</is_multi_valued>
       <is_required>0</is_required>
       <label xml:lang="en">Due Date Offset (Days)</label>
-      <name>action_due_date_offset_days</name>
       <range_inclusive>0</range_inclusive>
       <readonly>0</readonly>
       <sort_order>100</sort_order>
       <source_id keyed_name="gAction Item Template Action" type="ItemType" name="gAction Item Template Action">97262B91990A4C128CD8FDE5094E6DE1</source_id>
       <track_history>0</track_history>
+      <name>action_due_date_offset_days</name>
      </Item>
      <Item type="Property" id="5AB697FD7E674513B0D96691D1D024AA" action="add">
       <column_alignment>left</column_alignment>
@@ -60,13 +58,13 @@
       <is_multi_valued>0</is_multi_valued>
       <is_required>1</is_required>
       <label xml:lang="en">Description</label>
-      <name>action_item_description</name>
       <range_inclusive>0</range_inclusive>
       <readonly>0</readonly>
       <sort_order>10</sort_order>
       <source_id keyed_name="gAction Item Template Action" type="ItemType" name="gAction Item Template Action">97262B91990A4C128CD8FDE5094E6DE1</source_id>
       <stored_length>256</stored_length>
       <track_history>0</track_history>
+      <name>action_item_description</name>
      </Item>
      <Item type="Property" id="C158B58A84BB4BB589BF7F496D8EADD3" action="add">
       <column_alignment>left</column_alignment>
@@ -80,12 +78,13 @@
       <is_multi_valued>0</is_multi_valued>
       <is_required>1</is_required>
       <label xml:lang="en">Priority</label>
-      <name>action_priority</name>
       <range_inclusive>0</range_inclusive>
       <readonly>0</readonly>
       <sort_order>5</sort_order>
       <source_id keyed_name="gAction Item Template Action" type="ItemType" name="gAction Item Template Action">97262B91990A4C128CD8FDE5094E6DE1</source_id>
+      <stored_length>256</stored_length>
       <track_history>0</track_history>
+      <name>action_priority</name>
      </Item>
      <Item type="Property" id="A3D8DDCE8BC04EDB9A2EB4DF71D0AF74" action="add">
       <column_alignment>center</column_alignment>
@@ -98,49 +97,22 @@
       <is_multi_valued>0</is_multi_valued>
       <is_required>0</is_required>
       <label xml:lang="en">Closing Notes Required</label>
-      <name>is_closing_notes_required</name>
       <range_inclusive>0</range_inclusive>
       <readonly>0</readonly>
       <sort_order>110</sort_order>
       <source_id keyed_name="gAction Item Template Action" type="ItemType" name="gAction Item Template Action">97262B91990A4C128CD8FDE5094E6DE1</source_id>
       <track_history>0</track_history>
-     </Item>
-     <Item type="View" id="5062D2C892584C52A9D2C1CB73564F29" action="add">
-      <client>js</client>
-      <related_id keyed_name="gAction Item Template Action" type="Form">38DF1060A3E949F78F3EAA6963A462B2</related_id>
-      <role keyed_name="World" type="Identity">
-       <Item type="Identity" action="get" select="id">
-        <name>World</name>
-       </Item>
-      </role>
-      <sort_order>128</sort_order>
-      <source_id keyed_name="gAction Item Template Action" type="ItemType" name="gAction Item Template Action">97262B91990A4C128CD8FDE5094E6DE1</source_id>
-      <type>default</type>
+      <name>is_closing_notes_required</name>
      </Item>
     </Relationships>
    </Item>
   </relationship_id>
   <sort_order>128</sort_order>
   <source_id keyed_name="gAction Item Template" type="ItemType" name="gAction Item Template">7C93F0563E114E91BD27FD65C04AE397</source_id>
+  <name>gAction Item Template Action</name>
  </Item>
  <Item type="ItemType" id="97262B91990A4C128CD8FDE5094E6DE1" action="edit">
   <Relationships>
-   <Item type="Property" action="edit" where="source_id='97262B91990A4C128CD8FDE5094E6DE1' and name='generation'">
-    <column_alignment>left</column_alignment>
-    <data_type>integer</data_type>
-    <is_hidden>1</is_hidden>
-    <is_hidden2>1</is_hidden2>
-    <is_indexed>0</is_indexed>
-    <is_keyed>0</is_keyed>
-    <is_multi_valued>0</is_multi_valued>
-    <is_required>0</is_required>
-    <name>generation</name>
-    <range_inclusive>0</range_inclusive>
-    <readonly>1</readonly>
-    <sort_order>2432</sort_order>
-    <source_id keyed_name="gAction Item Template Action" type="ItemType" name="gAction Item Template Action">97262B91990A4C128CD8FDE5094E6DE1</source_id>
-    <track_history>0</track_history>
-   </Item>
    <Item type="Property" action="edit" where="source_id='97262B91990A4C128CD8FDE5094E6DE1' and name='managed_by_id'">
     <column_alignment>left</column_alignment>
     <column_width>120</column_width>
@@ -154,12 +126,12 @@
     <is_required>0</is_required>
     <item_behavior>float</item_behavior>
     <label xml:lang="en">Action Default Reviewers</label>
-    <name>managed_by_id</name>
     <range_inclusive>0</range_inclusive>
     <readonly>0</readonly>
     <sort_order>21</sort_order>
     <source_id keyed_name="gAction Item Template Action" type="ItemType" name="gAction Item Template Action">97262B91990A4C128CD8FDE5094E6DE1</source_id>
     <track_history>0</track_history>
+    <name>managed_by_id</name>
    </Item>
    <Item type="Property" action="edit" where="source_id='97262B91990A4C128CD8FDE5094E6DE1' and name='owned_by_id'">
     <column_alignment>left</column_alignment>
@@ -174,12 +146,12 @@
     <is_required>1</is_required>
     <item_behavior>float</item_behavior>
     <label xml:lang="en">Action Default Owner</label>
-    <name>owned_by_id</name>
     <range_inclusive>0</range_inclusive>
     <readonly>0</readonly>
     <sort_order>20</sort_order>
     <source_id keyed_name="gAction Item Template Action" type="ItemType" name="gAction Item Template Action">97262B91990A4C128CD8FDE5094E6DE1</source_id>
     <track_history>0</track_history>
+    <name>owned_by_id</name>
    </Item>
    <Item type="Property" action="edit" where="source_id='97262B91990A4C128CD8FDE5094E6DE1' and name='sort_order'">
     <column_alignment>right</column_alignment>
@@ -192,13 +164,15 @@
     <is_multi_valued>0</is_multi_valued>
     <is_required>0</is_required>
     <label xml:lang="en">Pos</label>
-    <name>sort_order</name>
     <range_inclusive>0</range_inclusive>
     <readonly>0</readonly>
     <sort_order>1</sort_order>
     <source_id keyed_name="gAction Item Template Action" type="ItemType" name="gAction Item Template Action">97262B91990A4C128CD8FDE5094E6DE1</source_id>
     <track_history>0</track_history>
+    <name>sort_order</name>
    </Item>
   </Relationships>
  </Item>
+ <Item type="View" action="delete" where="source_id='97262B91990A4C128CD8FDE5094E6DE1'" />
+ <Item type="Form" action="delete" where="name='gAction Item Template Action'" />
 </AML>
