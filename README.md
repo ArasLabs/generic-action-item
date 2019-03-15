@@ -62,7 +62,7 @@ This package can be used one of two ways:
 ###Example Usage: 
 1. (Optional) Create Template(s) for action items
 2. Create New or Open Existing Express DCO
-  * if new, must save item before using template action
+  * If the item is new, save item before using template action.
 3. Use Action to add from template or add ad hoc using tab
 4. Fire workflow for action using RMB action in search grid/tab
 5. Complete action items via inbasket (closing item will require user password)
