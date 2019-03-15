@@ -60,7 +60,7 @@ This package can be used one of two ways:
 > This item may also be configured as a relationship to other items, but must be set to a Create New type of relationship.
 
 ###Example Usage: 
-1. (Optional) Create Template(s) for action items
+1. (Optional) Create Template(s) for action items.
 2. Create or open an Express DCO.
   * If the item is new, save item before using template action.
 3. Use Action to add from template or add ad hoc using tab
