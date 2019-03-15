@@ -20,7 +20,7 @@ Release | Notes
 
 Project | Aras
 --------|------
-[v2.0.1](https://github.com/ArasLabs/generic-action-item/releases/tag/v2.0.1) | Tested on 11 SP12, 15
+[v2.0.1](https://github.com/ArasLabs/generic-action-item/releases/tag/v2.0.1) | 10 SPx, 11 SPx
 [v2](https://github.com/ArasLabs/generic-action-item/releases/tag/v2) | 10 SPx, 11 SPx
 [v1](https://github.com/ArasLabs/generic-action-item/releases/tag/v1) | 9.3 SPx, 9.4 SPx
 
