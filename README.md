@@ -66,7 +66,7 @@ This package can be used one of two ways:
 3. Use Action to add from template or add ad hoc using tab
 4. Fire workflow for action using RMB action in search grid/tab
 5. Complete action items via inbasket (closing item will require user password)
-  * if notes are needed to close, add to action item via RMB view command
+  * If notes are needed to close, add to action item via RMB view command.
 
 > See [generic Action Item Concepts v1-2(A10).pdf](./Documentation/generic%20Action%20Item%20Concepts%20v1-2(A10).pdf) for more information on using this project.
 
