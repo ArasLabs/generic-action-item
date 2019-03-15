@@ -54,7 +54,7 @@ Project | Aras
 
 ## Usage
 This package can be used one of two ways:
-* by use of an Action Item Template set up by an Administrator
+* Use an Action Item Template set up by an Administrator
 * Added to an existing DCO item by a user either as ad-hoc or by using an existing template as above
 
 > This item may also be configured as a relationship to other items, but must be set to a Create New type of relationship.
