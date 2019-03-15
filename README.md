@@ -12,6 +12,7 @@ This project and the following release notes have been migrated from the old Ara
 
 Release | Notes
 --------|--------
+[v2.0.1](https://github.com/ArasLabs/generic-action-item/releases/tag/v2.0.1) | Readme usage updated
 [v2](https://github.com/ArasLabs/generic-action-item/releases/tag/v2) | Generic Action Item Solution package and Documentation for Aras 10 + 11
 [v1](https://github.com/ArasLabs/generic-action-item/releases/tag/v1) | Generic Action Item Solution package and Documentation
 
@@ -19,6 +20,7 @@ Release | Notes
 
 Project | Aras
 --------|------
+[v2.0.1](https://github.com/ArasLabs/generic-action-item/releases/tag/v2.0.1) | Tested on 11 SP12, 15
 [v2](https://github.com/ArasLabs/generic-action-item/releases/tag/v2) | 10 SPx, 11 SPx
 [v1](https://github.com/ArasLabs/generic-action-item/releases/tag/v1) | 9.3 SPx, 9.4 SPx
 
@@ -47,11 +49,26 @@ Project | Aras
 8. Click **Import** in the top left corner.
 9. Optional: Repeat steps 5-8 for `..\GenericActionItem\Import\2-Import - Example on DCO (optional)\1-Import\imports (admin).mf`.
 10. Optional: Repeat steps 5-8 for `..\GenericActionItem\Import\2-Import - Example on DCO (optional)\2-Import\imports (admin).mf`.
-11. Close the Aras Package Import tool.
+11. Optional: Repeat steps 5-8 for `..\GenericActionItem\Import\3-Import - Example Action Item Template (optional)\imports (admin).mf`.
+12. Close the Aras Package Import tool.
 
 ## Usage
+This package can be used one of two ways:
+* by use of an Action Item Template set up by an Administrator
+* Added to an existing DCO item by a user either as ad-hoc or by using an existing template as above
 
-See [generic Action Item Concepts v1-2(A10).pdf](./Documentation/generic%20Action%20Item%20Concepts%20v1-2(A10).pdf) for more information on using this project.
+> This item may also be configured as a relationship to other items, but must be set to a Create New type of relationship.
+
+###Example Usage: 
+1. (Optional) Create Template(s) for action items
+2. Create New or Open Existing Express DCO
+  * if new, must save item before using template action
+3. Use Action to add from template or add ad hoc using tab
+4. Fire workflow for action using RMB action in search grid/tab
+5. Complete action items via inbasket (closing item will require user password)
+  * if notes are needed to close, add to action item via RMB view command
+
+> See [generic Action Item Concepts v1-2(A10).pdf](./Documentation/generic%20Action%20Item%20Concepts%20v1-2(A10).pdf) for more information on using this project.
 
 ## Contributing
 
